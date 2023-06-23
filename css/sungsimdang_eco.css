@@ -62,6 +62,7 @@
     align-items: center;
     max-width: 700px;
     gap: 50px;
+    padding: 0 10px;
 }
 .textbox h2{
     font-family: 'Noto Serif KR';
@@ -97,6 +98,7 @@
     font-family: 'Noto Sans KR';
     font-weight: 700;
     font-size: 32px;
+    text-align: center;
 }
 .sec01 .img > div:hover p{
     display: flex;
@@ -169,12 +171,15 @@
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
+    text-align: center;
+    justify-content: center;
 }
 .sec03{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding: 0 10px;
 }
 .sec03 .text{
     display: flex;
@@ -244,6 +249,7 @@
     font-family: 'Noto Sans KR';
     font-size: 19px;
     text-align: center;
+    color: #000;
 }
 footer{
     background: #000;
@@ -334,8 +340,85 @@ footer .right a:nth-of-type(3)::before{
     .nav{
         width: 90%;
     }
+    .sec01 .img > div{
+        height: 200px;
+        min-height: initial;
+    }
     .sec01 .img > div p{
         display: flex;
         font-size: 29px;
+    }
+    footer .left{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px) {
+    .textbox h2{
+        font-size: 35px;
+    }
+    .textbox h3{
+        font-size: 18px;
+    }
+    .sec01 .img{
+        flex-direction: column;
+    }
+    .sec01 .img > div:nth-child(1),
+    .sec01 .img > div:nth-child(2),
+    .sec01 .img > div:nth-child(3),
+    .sec01 .img > div:nth-child(4){
+        border-radius: 20px 20px;
+        min-height: 100px;
+    }
+    .sec01 .img > div{
+        cursor: initial;
+    }
+    .sec01 .img > div p{
+        font-size: 20px;
+    }
+    .sec01 .img > div:nth-child(1){
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
+    }
+    .sec01 .img > div:nth-child(2){
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/repository/img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
+    }
+    .sec01 .img > div:nth-child(3){
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/repository/img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
+    }
+    .sec01 .img > div:nth-child(4){
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/repository/img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
+    }
+    .sec02{
+        flex-direction: column;
+    }
+    .sec03 h1{
+        font-size: 23px;
+    }
+    .sec03 h2{
+        font-size: 20px;
+    }
+    .sec04{
+        gap: 10px;
+    }
+    .sec04 h2{
+        font-size: 15px;
+    }
+    footer .text{
+        flex-direction: column;
+        gap: 20px;
+    }
+    footer .left{
+        width: 90%;
+    }
+    footer .left p,
+    footer .left ul a{
+        font-size: 14px;
+    }
+    footer .right{
+        align-items: flex-start;
+        width: 100%;
     }
 }
