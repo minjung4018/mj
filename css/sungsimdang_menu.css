@@ -6,7 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     word-break: keep-all;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     text-decoration: none;
     list-style: none;
 }
