@@ -1,0 +1,284 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Noto+Sans+KR&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
+    /* outline: 1px solid red; */
+    text-decoration: none;
+    list-style: none;
+}
+.nav{
+    width: 1280px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav img{
+    object-fit: fill;
+}
+.nav a{
+    display: flex;
+    align-items: center;
+}
+.nav span:first-of-type{
+    font-family: 'Noto Serif';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+}
+.nav span:last-of-type{
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.nav span:first-of-type::after{
+    content: '';
+    display: inline-block;
+    background: #000;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin: 0 0 3px 10px;
+}
+.content{
+    margin: 130px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.content h1{
+    font-family: 'Noto Serif';
+    font-size: 48px;
+}
+.spot img{
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+.spot{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+.spot a{
+    width: 100%;
+    height: 320px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    flex: 1 1 20%;
+}   
+.spot .info{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: inherit;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+    top: 87%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.spot .info > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.spot .info h1{
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+}
+.spot .info p:nth-child(1):before{
+    content: url(/repository/img/sungsimdang/Location.svg);
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.spot .info p:nth-child(2):before{
+    content: url(/repository/img/sungsimdang/time.svg);
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.spot .info p:nth-child(3):before{
+    content: url(/repository/img/sungsimdang/phone.svg);
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.spot .info p{
+    color: white;
+    display: flex;
+    padding: 0 5px;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.spot a:hover .info{
+    top: 0;
+    transition: all 0.5s ease;
+}
+footer{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    color: #999;
+    display: flex;
+    justify-content: center;
+}
+footer .inner{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 3%;
+}
+footer .text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .left ul{
+    display: flex;
+}
+footer .left ul a{
+    color: #999;
+}
+footer .left ul li:last-child a{
+    color: #F5CC97;
+}
+footer .left .text{
+    letter-spacing: -0.06em;
+}
+footer .right{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+footer .right h1{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 45px;
+    letter-spacing: 0.03em;
+    color: #F5CC97;
+}
+footer .right h2{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+footer span{
+    display: inline-block;
+    width: 15px;
+}
+footer .right > div{
+    display: flex;
+    gap: 20px;
+}
+footer .right a:nth-of-type(1)::before{
+    content: '';
+    background: url(/repository/img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+footer .right a:nth-of-type(2)::before{
+    content: '';
+    background: url(/repository/img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+footer .right a:nth-of-type(3)::before{
+    content: '';
+    background: url(/repository/img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+@media screen and (max-width:1260px){
+    .nav{
+        width: 90%;
+    }
+    .content h1{
+        font-size: 40px;
+    }
+    .spot{
+        width: 90%;
+        margin: 0 20px;
+    }
+    .spot a{
+        width: 100%;
+        height: 300px;
+        flex: 1 1 30%;
+    }
+    footer .left{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px) {
+    .spot a{
+        flex: 1 1 40%;
+        height: 40vw;
+    }
+    .spot .info{
+        height: 30px;
+        overflow: hidden;
+        bottom: 0;
+        top: initial;
+        padding: 5px;
+    }
+    .spot a:hover .info{
+        bottom: 0;
+        top: initial;
+        transition: initial;
+    }
+    .spot .info > div{
+        display: none;
+    }
+    .spot .info h1{
+        font-size: 15px;
+        border-bottom: initial;
+        padding-bottom: initial;
+    }
+    .spot .info p{
+        font-size: 13px;
+    }
+    footer .text{
+        flex-direction: column;
+        gap: 20px;
+    }
+    footer .left{
+        width: 90%;
+    }
+    footer .left p,
+    footer .left ul a{
+        font-size: 14px;
+    }
+    footer .right{
+        align-items: flex-start;
+        width: 100%;
+    }
+}

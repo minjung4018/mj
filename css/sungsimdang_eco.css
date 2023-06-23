@@ -1,0 +1,332 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Noto+Sans+KR&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+    word-break: keep-all;
+    text-decoration: none;
+    list-style: none;
+}
+.nav{
+    width: 1280px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav img{
+    object-fit: fill;
+}
+.nav a{
+    display: flex;
+    align-items: center;
+}
+.nav span:first-of-type{
+    font-family: 'Noto Serif';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+}
+.nav span:last-of-type{
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.nav span:first-of-type::after{
+    content: '';
+    display: inline-block;
+    background: #000;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin: 0 0 3px 10px;
+}
+.sec01{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    gap: 50px;
+}
+.textbox h2{
+    font-family: 'Noto Serif KR';
+    font-weight: 700;
+    font-size: 40px;
+}
+.textbox h3{
+    font-family: 'Noto Sans KR';
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+.sec01 .img{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+.sec01 .img > div{
+    flex: 1 1 40%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sec01 .img > div p{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    font-size: 32px;
+}
+.sec01 .img > div:hover p{
+    display: flex;
+}
+.sec01 .img > div:nth-child(1){
+    background: url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
+    border-radius: 40px 0;
+}
+.sec01 .img > div:nth-child(1):hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
+}
+.sec01 .img > div:nth-child(2){
+    background: url(/repository/img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
+    border-radius: 0 40px;
+}
+.sec01 .img > div:nth-child(2):hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/repository/img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
+}
+.sec01 .img > div:nth-child(3){
+    background: url(/repository/img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
+    border-radius: 0 40px;
+}
+.sec01 .img > div:nth-child(3):hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/repository/img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
+}
+.sec01 .img > div:nth-child(4){
+    background: url(/repository/img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
+    border-radius: 40px 0;
+}
+.sec01 .img > div:nth-child(4):hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/repository/img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
+}
+.sec01 .img > div:nth-child(1) p::before{
+    content: url(/repository/img/sungsimdang/eco_groups.svg);
+    display: block;
+}
+.sec01 .img > div:nth-child(2) p::before{
+    content: url(/repository/img/sungsimdang/eco_diversity.svg);
+    display: block;
+}
+.sec01 .img > div:nth-child(3) p::before{
+    content: url(/repository/img/sungsimdang/eco_compost.svg);
+    display: block;
+}
+.sec01 .img > div:nth-child(4) p::before{
+    content: url(/repository/img/sungsimdang/eco_volunteer.svg);
+    display: block;
+}
+.sec02{
+    margin: 100px 0;
+    width: 100%;
+    background: #E1EFE0;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+}
+.sec02 a{
+    display: flex;
+    padding: 10px 18px;
+    gap: 10px;
+    background: #688264;
+    border-radius: 50px;
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+.sec03{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.sec03 .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+.sec03 h1, .sec03 h2{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+}
+.sec03 h1{
+    font-size: 26px;
+    padding: 10px;
+    border-bottom: 2px solid #BC4400;
+}
+.sec03 ul{
+    width: 100%;
+    max-width: 1000px;
+}
+.sec03 ul li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sec03 ul li a{
+    color: #000;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #9E9E9E;
+    font-family: 'Noto Sans KR';
+    font-weight: 500;
+    font-size: 17px;
+}
+.sec03 ul li a::after{
+    content: '\25B8';
+    display: block;
+}
+.sec03 input[type=radio]{
+    display: none;
+}
+.sec03 .button{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.sec03 .button label{
+    color: #A2A2A2;
+}
+.sec03 label:checked{
+    color: #000;
+}
+.sec04{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 80px 0;
+    gap: 15px;
+}
+.sec04 h2{
+    font-family: 'Noto Sans KR';
+    font-size: 19px;
+    text-align: center;
+}
+footer{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    color: #999;
+    display: flex;
+    justify-content: center;
+}
+footer .inner{
+    width: 1200px;
+    display: flex;
+    gap: 30px;
+    padding: 0 3%;
+}
+footer .text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .left ul{
+    display: flex;
+}
+footer .left ul a{
+    color: #999;
+}
+footer .left ul li:last-child a{
+    color: #F5CC97;
+}
+footer .left .text{
+    letter-spacing: -0.06em;
+}
+footer .right{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+footer .right h1{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 45px;
+    letter-spacing: 0.03em;
+    color: #F5CC97;
+}
+footer .right h2{
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+footer span{
+    display: inline-block;
+    width: 15px;
+}
+footer .right > div{
+    display: flex;
+    gap: 20px;
+}
+footer .right a:nth-of-type(1)::before{
+    content: '';
+    background: url(/repository/img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+footer .right a:nth-of-type(2)::before{
+    content: '';
+    background: url(/repository/img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+footer .right a:nth-of-type(3)::before{
+    content: '';
+    background: url(/repository/img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
