@@ -218,7 +218,7 @@ footer .right a:nth-of-type(3)::before{
     height: 20px;
     display: block;
 }
-@media screen and (max-width:1260px){
+@media screen and (max-width:1280px){
     .nav{
         width: 90%;
     }
