@@ -87,6 +87,7 @@ header{
 }
 .gnb input[type=checkbox] + label > span.open {
     display: block;
+    cursor: pointer;
 }
 .gnb input[type=checkbox] + label > span.close {
     display: none;
@@ -96,6 +97,7 @@ header{
 }
 .gnb input[type=checkbox]:checked + label > span.close {
     display: block;
+    cursor: pointer;
 }
 .gnb > label{
     display: none;
@@ -608,7 +610,7 @@ footer .right a:nth-of-type(3)::before{
         height: 100vh;
         top: 95px;
         right: -100%;
-        background: #000;
+        background: rgba(0, 0, 0, 0.85);
         color: #fff;
         flex-direction: column;
         justify-content: flex-start;
@@ -676,14 +678,14 @@ footer .right a:nth-of-type(3)::before{
         text-align: start;
     }
     .gnb .sub li:hover{
-        background: #000;
+        background: none;
     }
     .gnb .sub li:hover a{
         color: #fff;
         font-weight: 500;
     }
     .gnb .sub li{
-        background: #000;
+        background: none;
         justify-content: flex-start;
         padding: 10px 20px;
     }
@@ -826,6 +828,7 @@ footer .right a:nth-of-type(3)::before{
     }
     .sec04 article{
         flex: initial;
+        align-items: flex-start;
     }
     .sec04 article img{
         object-fit: cover;

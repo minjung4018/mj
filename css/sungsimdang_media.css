@@ -6,7 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     word-break: keep-all;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     text-decoration: none;
     list-style: none;
 }
@@ -72,6 +72,7 @@
     font-weight: 500;
     font-size: 18px;
     cursor: pointer;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.20);
 }
 .button label:hover,
 .video input[type=radio]:nth-child(1):checked~.button label:nth-child(1){
