@@ -222,7 +222,9 @@
 }
 .sec03 ul li a::after{
     content: '\25B8';
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sec03 input[type=radio]{
     display: none;
@@ -240,14 +242,50 @@
 }
 .sec04{
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin: 80px 0;
-    gap: 15px;
+}
+.sec04 > div{
+    display: flex;
+    flex-direction: row;
+    max-width: 1280px;
+    gap: 10px;
+}
+.sec04 img{
+    width: 100%;
+}
+.sec04 span{
+    display: flex;
+    position: absolute;
+    width: 35px;
+    height: 28px;
+    top: calc(50% - 28px/2);
+    left: calc(50% - 35px/2);
+    padding: 0 0 2px 2px;
+    background: #d62b00;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.sec04 span::before{
+    content: '\25B6';
+    color: #fff;
+}
+.sec04 a {
+    width: 100%;
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+}
+.sec04 a > div{
+    position: relative;
 }
 .sec04 h2{
+    width: 100%;
     font-family: 'Noto Sans KR';
-    font-size: 19px;
+    font-size: 18px;
     text-align: center;
     color: #000;
 }
@@ -348,6 +386,13 @@ footer .right a:nth-of-type(3)::before{
         display: flex;
         font-size: 29px;
     }
+    .sec03 ul li a{
+        font-size: 16px;
+    }
+    .sec04 > div{
+        max-width: 1200px;
+        width: 90%;
+    }
     footer .left{
         width: 60%;
     }
@@ -404,7 +449,7 @@ footer .right a:nth-of-type(3)::before{
         gap: 10px;
     }
     .sec04 h2{
-        font-size: 15px;
+        font-size: 14px;
     }
     footer .text{
         flex-direction: column;

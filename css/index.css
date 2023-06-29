@@ -248,6 +248,8 @@ header{
     font-size: 32px;
     line-height: 46px;
     margin-bottom: 9px;
+    border-bottom: 2px solid goldenrod;
+    padding: 10px;
 }
 .sec02inner h2{
     font-family: 'Noto Serif';
@@ -451,6 +453,10 @@ header{
 .sec04 article{
     height: 100%;
     object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 .sec04 .right{
     display: flex;
@@ -595,7 +601,6 @@ footer .right a:nth-of-type(3)::before{
     .gnb > ul > li:hover ul.sub{
         display: none;
     }
-
     .gnb > ul {
         display: flex;
         position: fixed;
@@ -620,7 +625,7 @@ footer .right a:nth-of-type(3)::before{
         justify-content: space-between;
         width: 100%;
         flex-flow: row wrap;
-        padding: 10px 0;
+        padding: 15px 0;
         border-bottom: 1px solid #222;
     }
     .gnb > input[type=checkbox]:checked ~ ul {
@@ -644,7 +649,7 @@ footer .right a:nth-of-type(3)::before{
         color: #fff;
         display: block;
         cursor: pointer;
-        padding-left: 30px;
+        transition: all 0.3s ease;
     }
     .gnb > ul > li > div{
         width: 100%;
@@ -653,9 +658,14 @@ footer .right a:nth-of-type(3)::before{
     .gnb > ul > li input[type=checkbox]:checked ~ div .sub{
         display: flex;
         position: initial;
+        padding: 10px 0;
     }
     .gnb > ul > li input[type=checkbox]:checked ~ a span{
         color: #F5CC97;
+    }
+    .gnb > ul > li input[type=checkbox]:checked ~ label::after{
+        transform: rotate(180deg);
+        transition: all 0.3s ease;
     }
     .gnb > ul span{
         font-size: 18px;
