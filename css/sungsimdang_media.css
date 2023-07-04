@@ -467,6 +467,9 @@ footer .right a:nth-of-type(3)::before{
         padding: 15px 0;
         border-bottom: 1px solid #444;
     }
+    .gnb > ul > li:nth-child(4) span::after{
+        border-bottom: none;
+    }
     .gnb > input[type=checkbox]:checked ~ ul {
         right: 0;
         transition: all 0.5s ease;

@@ -44,6 +44,7 @@ header > img{
     font-family: 'Noto Sans', sans-serif;
     display: flex;
     align-items: center;
+    font-size: 14px;
 }
 .nav a:first-child:hover{
     border-bottom: none;
