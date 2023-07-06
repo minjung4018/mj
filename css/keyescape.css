@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     word-break: keep-all;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     text-decoration: none;
     list-style: none;
 }
@@ -46,12 +46,9 @@ header > img{
     align-items: center;
     font-size: 14px;
 }
-.nav a:first-child:hover{
-    border-bottom: none;
-}
 .nav a:hover{
     color: #000;
-    border-bottom: #222 1px solid;
+    text-decoration: underline;
 }
 .arrow{
     position: absolute;
@@ -68,11 +65,115 @@ header > img{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(../img/key/sec01_bg.jpg) 50% 50% / cover;
+    background: url(../img/key/sec01_bg.jpg) no-repeat 50% 50% / cover;
 }
 .sec01 img{
     object-fit: cover;
-    max-width: 100vw;
+    max-width: 95vw;
+}
+.sec01 .mo_img{
+    display: none;
+}
+.sec02{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+.sec02 .mySwiper{
+    padding: 0 60px;
+}
+.sec02 .theme{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sec02 .theme p{
+    color: #000;
+    font-size: 15px;
+}
+.sec02 .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.sec02 .theme p{
+    padding: 10px 0;
+    border-bottom: 1px dashed #777
+}
+.swiper-button-next,
+.swiper-button-prev{
+    color: #777;
+}
+.sec03{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 270px auto;
+}
+.sec03 img{
+    width: 100%;
+}
+.sec03 .location{
+    padding: 0 50px;
+    overflow: hidden;
+}
+.sec03 .swiper-button-next:after,
+.sec03 .swiper-button-prev:after {
+    font-size: 20px;
+    color: #444;
+}
+.sec03 .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 150px;
+    border-top: 1px solid #ccc;
+    padding: 30px 0;
+}
+.infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infor p{
+    font-size: 13px;
+    color: #444;
+}
+.infor > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.infor span::after{
+    content: '';
+    border-left: 1px solid #888;
+    height: 10px;
+    display: block;
+}
+.copy p{
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #444;
+}
+footer .btn a{
+    font-size: 13px;
+    padding: 5px 25px;
+    color: #fff;
+    background: darkolivegreen;
 }
 @keyframes main {
     0% {
