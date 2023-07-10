@@ -1,7 +1,7 @@
-var menu = document.querySelector('#collapsible')
-var check1 = document.querySelector('#tab_menu')
-var check2 = document.querySelector('#tab_menu2')
-var check3 = document.querySelector('#tab_menu4')
+const menu = document.querySelector('#collapsible')
+const check1 = document.querySelector('#tab_menu')
+const check2 = document.querySelector('#tab_menu2')
+const check3 = document.querySelector('#tab_menu4')
 function cancelSelection() {   
     if(!menu.cheked){
         check1.checked = false;

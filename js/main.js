@@ -1,20 +1,34 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 60,
+  slidesPerView: 2,
+  spaceBetween: 20,
   // freemode: true,
   loop: true,
-  slidesPerGroup: 4,
+  slidesPerGroup: 2,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".sec02 .swiper-button-next",
+    prevEl: ".sec02 .swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 60,
+    },
   },
 });
 var swiper2 = new Swiper(".location", {
-  slidesPerView: 5,
+  slidesPerView: 2,
   spaceBetween: 10,
-  slidesPerGroup: 5,
+  slidesPerGroup: 2,
   navigation: {
     nextEl: ".sec03 .swiper-button-next",
     prevEl: ".sec03 .swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      spaceBetween: 10,
+    },
   },
 });
