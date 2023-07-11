@@ -40,12 +40,16 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="#" class="theme">
-                <img src="img/key/1.jpg" alt="">
+              <div class="theme" id="modal-open">
+                <div class="img">
+                  <img src="img/key/1.jpg" alt="">
+                </div>
                 <p>BACK TO THE SCENE+</p>
-              </a>
+              </div>
               <a href="#" class="theme">
-                <img src="img/key/2.jpg" alt="">
+                <div class="img">
+                  <img src="img/key/2.jpg" alt="">
+                </div>
                 <p>머니머니패키지</p>
               </a>
             </div>
@@ -91,6 +95,28 @@
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+      </div>
+      <div class="modal">
+        <div id="modal-box">
+          <div id="modal-contents">
+            <button id="close">&times;</button>
+            <h1 id="title">BACK TO THE SCENE+</h1>
+            <div class="in">
+              <h2>장르</h2>
+              <h2>플레이시간</h2>
+              <h2>난이도</h2>
+            </div>
+            <div id="content">
+              <img src="img/key/1.jpg" alt="">
+              <div id="text">
+                <p class="user">"선생님, 응급 환자 입니다! 서둘러 주세요!"</p>
+              </div>
+            </div>
+            <div class="btn">
+              <a href="#">예약하기</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sec03">
         <div class="swiper location">
@@ -133,5 +159,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/modal.js" defer></script>
 </body>
 </html>
