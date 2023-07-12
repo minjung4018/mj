@@ -164,7 +164,7 @@ header > label{
     flex-direction: column;
     gap: 40px;
 }
-#modal-box{
+.modal-box{
     position: fixed;
     top: 0;
     left: 0;
@@ -177,8 +177,8 @@ header > label{
     align-items: center;
     z-index: 50;
 }
-#modal-box.active{display: flex;}
-#modal-contents{
+.modal-box.active{display: flex;}
+.modal-contents{
     background-color:#fff;
     padding: 30px;
     position: absolute;
@@ -189,7 +189,7 @@ header > label{
     height: 700px;
     z-index: 51;
 }
-#modal-contents button {
+.modal-contents button {
     background-color:#fff;
     color:#777;
     font-size:30px;
@@ -201,42 +201,49 @@ header > label{
     cursor: pointer;
     padding: 3px 5px;
 }
-#modal-box .in{
+.modal-box .in{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px 0;
     border-bottom: 1px solid #a5a5a5;
 }
-#modal-box #modal-contents h1{
+.modal-box .modal-contents h1{
     font-size: 16px; 
 }
-#modal-box #modal-contents .in h2{
-    font-size: 15px;
+.modal-box .modal-contents .in h2{
+    font-size: 14px;
 }
-#modal-box #modal-contents #content img{
+.modal-box .modal-contents .content img{
     object-fit: cover;
     width: 250px;
     height: 250px;
 }
-#modal-box #modal-contents #content{
+.modal-box .modal-contents .content{
     display: flex;
     flex-direction: row;
     gap: 15px;
     height: 80%;
 }
-#modal-box #modal-contents #text{
+.modal-box .modal-contents .text{
     overflow: scroll;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
-#modal-contents .btn{
+.modal-box .modal-contents .text p{
+    font-size: 13px;
+
+}
+.modal-contents .btn{
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin:10px 0;
 }
-#modal-contents .btn a{
+.modal-contents .btn a{
     color: #fff;
     background: rgb(19, 6, 56);
     padding: 10px 25px;
@@ -347,7 +354,7 @@ footer .btn a{
     
 }
 @media screen and (max-width:1100px) {
-    #modal-contents{
+    .modal-contents{
         width: 95%;
     }
     footer{
@@ -421,22 +428,22 @@ footer .btn a{
     .sec02 .theme:hover .img::after{
         display: none;
     }
-    #modal-contents{
+    .modal-contents{
         width: 95%;
         height: 800px;
         justify-content: center;
     }
-    #modal-box #modal-contents #content img{
+    .modal-box .modal-contents .content img{
         object-fit: cover;
         width: 100%;
         max-width: 270px;
         height: initial;
     }
-    #modal-box #modal-contents #content {
+    .modal-box .modal-contents .content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
         height: 80%;
     }
     footer{
