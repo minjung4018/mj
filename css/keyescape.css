@@ -130,12 +130,18 @@ header > label{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    cursor: pointer;
+    overflow: hidden;
 }
 .sec02 .theme p{
     color: #000;
     font-size: 14px;
-    padding: 10px 0;
+    padding: 5px 0 10px 0;
     border-bottom: 1px dashed #777;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 95%;
 }
 .sec02 .theme .img{
     position: relative;
@@ -222,20 +228,18 @@ header > label{
 .modal-box .modal-contents .content{
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 30px;
     height: 80%;
+    overflow-y: scroll;
 }
 .modal-box .modal-contents .text{
-    overflow: scroll;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+    padding: 0 5px;
 }
 .modal-box .modal-contents .text p{
-    font-size: 13px;
-
+    font-size: 12px;
+    line-height: 23px;
 }
 .modal-contents .btn{
     display: flex;
@@ -407,6 +411,9 @@ footer .btn a{
         z-index: 20;
         transition: all 0.5s ease;
     }
+    .arrow img:hover{
+        animation: initial;
+    }
     .sec01 .mo_img{
         display: block;
     }
@@ -424,6 +431,9 @@ footer .btn a{
     font-size: 20px;
     z-index: 2;
     position: absolute;
+    }
+    .sec02 .theme{
+        gap: 10px;
     }
     .sec02 .theme:hover .img::after{
         display: none;
