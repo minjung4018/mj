@@ -310,3 +310,17 @@ close.addEventListener('click',() => {
 Box26.addEventListener('click',() => {
     Box26.classList.remove('active')
 });
+
+// sec03 지점정보
+
+const btns = document.querySelectorAll(".radio button")
+const infos = document.querySelectorAll(".down > div")
+Array.from(btns).forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+        for(info of infos){ info.classList.remove('on') }
+        for(btn of btns){ btn.classList.remove('on') }
+        btns[index].classList.add("on");
+		infos[index].classList.add("on");
+    })
+})
+btns[0].click()
