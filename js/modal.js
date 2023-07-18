@@ -321,6 +321,13 @@ Array.from(btns).forEach((btn, index) => {
         for(btn of btns){ btn.classList.remove('on') }
         btns[index].classList.add("on");
 		infos[index].classList.add("on");
+
+        let num = `0${index + 1}`
+        let map = new Function(`return map${num}`)()
+        map.relayout()
+        let x = new Function(`return x_${num}`)()
+        let y = new Function(`return y_${num}`)()
+        map.setCenter(new kakao.maps.LatLng(x,y))
     })
 })
 btns[0].click()

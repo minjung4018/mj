@@ -1,0 +1,112 @@
+@charset "uf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
+    /* outline: 1px solid red; */
+    text-decoration: none;
+    list-style: none;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 200,
+    'opsz' 48
+}
+header{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin: 30px 0;
+}
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox] + label > span.open {
+    display: block;
+    cursor: pointer;
+}
+input[type=checkbox] + label > span.close {
+    display: none;
+}
+input[type=checkbox]:checked + label > span.open {
+    display: none;
+}
+input[type=checkbox]:checked + label > span.close {
+    display: block;
+    cursor: pointer;
+}
+header > label{
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+}
+.nav{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    z-index: 2;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.6);
+}
+.nav a{
+    color: #555;
+    letter-spacing: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.nav a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+@media screen and (max-width:768px) {
+    header > input[type=checkbox] + label{
+        display: flex;
+    }
+    header > input[type=checkbox]:checked + label{
+        color: #fff;
+    }
+    header > input[type=checkbox]:checked ~ .nav{
+        right: 0;
+        transition: all 0.5s ease;
+    }
+    header > input[type=checkbox] ~ .nav a:first-child{
+        display: none;
+    }
+    header > input[type=checkbox]:checked ~ .nav a{
+        color: #fff;
+    }
+    header .nav {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        background: rgba(18, 36, 24, 0.9);
+        color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap: 40px;
+        z-index: 20;
+        transition: all 0.5s ease;
+    }
+}

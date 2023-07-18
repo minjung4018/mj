@@ -249,7 +249,7 @@ header > label{
 }
 .modal-contents .btn a{
     color: #fff;
-    background: rgb(19, 6, 56);
+    background: #130638;
     padding: 10px 25px;
     font-size: 14px;
 }
@@ -270,35 +270,49 @@ header > label{
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: #54613f;
+    /* background: #f7f5fa; */
 }
 .sec03 .btn{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 800px;
     justify-content: center;
     gap: 20px;
-    padding: 30px 0;
+    padding: 50px 0;
 }
 .sec03 .btn button{
-    background: #eee;
-    color: #54613f;
+    background: #fff;
+    color: #594492;
     padding: 5px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
     border-radius: 7px;
     font-family: 'Noto Sans KR';
     font-size: 14px;
     cursor: pointer;
     width: 110px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.sec03 .btn button.on{
+    background: #594492;
+    color: #fff;   
 }
 .sec03 .down{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.sec03 .down > div .img{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: flex-start;
+    order: 2;
 }
 .sec03 .down > div{
     width: 100%;
@@ -329,15 +343,21 @@ header > label{
     padding: 3px;
     border: 3px solid #000;
 }
-.sec03 .down .right p{
-    font-size: 17px;
-    padding: 20px 5px;
-    font-weight: 600;
+.sec03 .down .img p{
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans KR';
+    width: 100%;
+    padding: 0 0 5px 0;
+    text-align: end;
+    color: #1d153b;
+    border-bottom: 2px solid #4d4665;
 }
 td{
     padding: 8px 15px;
     font-size: 13px;
-    color: #444;
+    color: #444444;
     border-bottom: 1px dotted #888;
     font-family: 'Noto Sans', sans-serif;
 }
@@ -345,6 +365,10 @@ td:first-child{
     text-align: center;
     color: #000;
     font-size: 14px;
+}
+.sec03 .down .right{
+    height: 500px;
+    overflow-y: auto;
 }
 .sec03 .down .right td span{
     line-height: 24px;
@@ -427,6 +451,24 @@ footer .btn a{
     .modal-contents{
         width: 95%;
     }
+    .sec03 .down{
+        padding: 0 20px;
+    }
+    .sec03 .down > div{
+        flex-direction: column;
+    }
+    .sec03 .down .left {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .sec03 .down > div .img{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .sec03 .down .right {
+        overflow-y: initial;
+        height: initial;
+    }
     footer{
         margin-bottom: 100px;
     }
@@ -491,9 +533,7 @@ footer .btn a{
         height: 90vH;
     }
     .sec02 .swiper-button-next::after,
-    .sec02 .swiper-button-prev::after,
-    .sec03 .swiper-button-next::after,
-    .sec03 .swiper-button-prev::after{
+    .sec02 .swiper-button-prev::after{
     font-size: 20px;
     z-index: 2;
     position: absolute;
@@ -521,6 +561,27 @@ footer .btn a{
         align-items: center;
         gap: 20px;
         height: 80%;
+    }
+    .map{
+        width: 100%;
+    }
+    .sec03 .btn{
+        gap: 15px;
+    }
+    .sec03 .down .left {
+        flex-direction: column;
+    }
+    .sec03 .down > div .img{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sec03 .down .left img {
+        width: 250px;
+        flex: 1 1;
+    }
+    .sec03 .down .img p {
+        font-size: 13px;
+        letter-spacing: 2.5px;
     }
     footer{
         margin-bottom: 20px;
