@@ -6,7 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     word-break: keep-all;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     text-decoration: none;
     list-style: none;
 }
@@ -24,8 +24,8 @@ header{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    position: relative;
-    margin: 30px 0;
+    position: fixed;
+    width: 100%;
 }
 input[type=checkbox]{
     display: none;
