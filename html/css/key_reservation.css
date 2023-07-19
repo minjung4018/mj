@@ -27,6 +27,22 @@ header{
     position: fixed;
     width: 100%;
 }
+.toplogo{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 19;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.3);
+}
+.toplogo a{
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #333;
+}
 input[type=checkbox]{
     display: none;
 }
@@ -47,8 +63,8 @@ input[type=checkbox]:checked + label > span.close {
 header > label{
     display: none;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 30;
 }
 .nav{
@@ -76,6 +92,9 @@ header > label{
     text-decoration: underline;
 }
 @media screen and (max-width:768px) {
+    .toplogo{
+        display: block;
+    }
     header > input[type=checkbox] + label{
         display: flex;
     }

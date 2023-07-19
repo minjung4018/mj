@@ -12,33 +12,37 @@
 </head>
 
 <body>
-  <header>
-    <img src="img/key/main_img.jpg" alt="">
-    <input type="checkbox" id="collapsible">
-    <label for="collapsible">
-      <span class="material-symbols-outlined open">menu</span>
-      <span class="material-symbols-outlined close">close</span>
-    </label>
-    <div class="nav">
-      <a href="#">
-        <img src="img/key/logo.png" alt="로고">
-      </a>
-      <a href="#">THEME</a>
-      <a href="#">LOCATION</a>
-      <a href="#">RESERVATION</a>
-    </div>
-    <div class="arrow">
-      <img src="img/key/downarrow.svg" alt="">
-    </div>
-  </header>
-  <main>
-    <div class="sec01">
+  <main id="scrollpage">
+    <header data-page="page1">
+      <img src="img/key/main_img.jpg" alt="">
+      <div class="toplogo">
+        <a href="#">KEYESCAPE</a>
+      </div>
+      <input type="checkbox" id="collapsible">
+      <label for="collapsible">
+        <span class="material-symbols-outlined open">menu</span>
+        <span class="material-symbols-outlined close">close</span>
+      </label>
+      <div class="nav">
+        <a href="#">
+          <img src="img/key/logo.png" alt="로고">
+        </a>
+        <a href="#">THEME</a>
+        <a href="#">LOCATION</a>
+        <a href="#">RESERVATION</a>
+        <a href="#">Q&A</a>
+      </div>
+      <div class="arrow">
+        <img src="img/key/downarrow.svg" alt="">
+      </div>
+    </header>
+    <div class="sec01" data-page="page2">
       <img src="img/key/section1.png" alt="">
       <div class="mo_img">
         <img src="img/key/m_section1.png" alt="">
       </div>
     </div>
-    <div class="sec02">
+    <div class="sec02" data-page="page3">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -1143,7 +1147,7 @@
       </div>
     </div>
     <!-- 팝업 끝 -->
-    <div class="sec03">
+    <div class="sec03" data-page="page4">
       <div class="radio">
         <div class="btn">
           <button>LOG_IN 1</button>
@@ -1744,7 +1748,8 @@
         </div>
       </div>
     </div>
-    <footer>
+  </main>
+  <footer>
       <div class="infor">
         <div>
           <p>상호 : 키이스케이프(주)</p><span></span>
@@ -1763,8 +1768,7 @@
       <div class="btn">
         <a href="">개인정보정책</a>
       </div>
-    </footer>
-  </main>
+  </footer>
   <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4fb175a5911dbfdcca1e9653a1594699"></script>
   <script src="js/map.js" defer></script>
   <script src="js/modal.js" defer></script>

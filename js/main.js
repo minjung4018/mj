@@ -1,3 +1,15 @@
+// function page(){
+//   document.addEventListener('wheel', this.onMouseWheel, {passive : false})
+//   $('#scrollpage').fullpage({
+//     scrollingSpeed:800,
+//     autoScrolling: true,
+//     navigation: false,
+//     menu: '.nav',
+//     anchors: ['page1','page2','page3','page4'],
+//     // responsiveWidth: 1100,
+
+//   })
+// }
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 20,
@@ -21,24 +33,6 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
-var swiper2 = new Swiper(".location", {
-  slidesPerView: 2,
-  spaceBetween: 10,
-  slidesPerGroup: 2,
-  navigation: {
-    nextEl: ".sec03 .swiper-button-next",
-    prevEl: ".sec03 .swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 10,
-    },
-    1100: {
-      slidesPerView: 5,
-      slidesPerGroup: 5,
-      spaceBetween: 10,
-    },
-  },
-});
+// $(document).ready(function(){
+//   page()
+// })

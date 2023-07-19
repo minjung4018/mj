@@ -358,41 +358,22 @@ header{
 .banner{
     position: relative;
 }
-.sec03 p::before{
-    content: url(/repository/img/sungsimdang/foodbank.svg);
-    position: absolute;
-    top: -55px;
-    left: 40px;
+.sec03 span{
+    font-weight: 700;
+    position: relative;
+    color: #ffeaa6;
+    letter-spacing: 2px;
 }
-.sec03 p::after{
-    content: url(/repository/img/sungsimdang/iconcake.svg);
+.sec03 span::after{
+    content: '';
+    display: block;
+    background: #ffeaa6;
     position: absolute;
-    top: 30px;
-    left: -95px;
-}
-.sec03 strong::before{
-    content: url(/repository/img/sungsimdang/iconfoodbeverage.svg);
-    position: absolute;
-    top: -68px;
-    right: 198px;
-}
-.sec03 strong::after{
-    content: url(/repository/img/sungsimdang/iconrestaurant.svg);
-    position: absolute;
-    bottom: -78px;
-    left: 136px;
-}
-.sec03 .banner::after{
-    content: url(/repository/img/sungsimdang/iconstorefront.svg);
-    position: absolute;
-    bottom: 40px;
-    right: -100px;
-}
-.sec03 .banner::before{
-    content: url(/repository/img/sungsimdang/iconstore.svg);
-    position: absolute;
-    bottom: -52px;
-    right: 79px;
+    top: -5px;
+    left: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
 }
 .sec04{
     display: flex;
