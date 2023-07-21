@@ -1,12 +1,13 @@
 @charset "uf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Sans:wght@500&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,0");
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     word-break: keep-all;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     text-decoration: none;
     list-style: none;
 }
@@ -15,6 +16,23 @@
     'FILL' 0,
     'wght' 500,
     'GRAD' 200,
+    'opsz' 48
+}
+.star,
+.half{
+    color: #D1AF94;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+.fullstar{
+    color: #D1AF94;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
     'opsz' 48
 }
 header{
@@ -90,6 +108,184 @@ header > label{
 .nav a:hover{
     color: #000;
     text-decoration: underline;
+}
+.title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 95px 0 50px;
+}
+.title span:first-child{
+    height: 100px;
+    width: 1px;
+    border-left: 1px solid #4a4a4a;
+}
+.title span:nth-child(2){
+    font-family: 'Noto Sans Kr';
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.title span:nth-child(3){
+    font-family: 'Noto Sans';
+    font-size: 16px;
+    letter-spacing: 4.8px;
+}
+.sec01{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+}
+.sec01 > div{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    gap: 10px;
+}
+.sec01 .name{
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+.sec01 .name p{
+    font-family: 'Noto Sans Kr';
+    font-size: 15px;
+}
+.sec01 .theme{
+    width: 100%;
+    padding: 10px 20px;
+    overflow-y: auto;
+}
+.sec01 .theme input[type=radio]{
+    display: none;
+}
+.sec01 .theme .btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sec01 .theme .btn label{
+    padding: 10px 35px;
+    background: #f2f2f2;
+    font-family: 'Noto Sans Kr';
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+}
+.sec01 .theme input[type=radio]:nth-child(1):checked~.btn label:nth-child(1),
+.sec01 .theme input[type=radio]:nth-child(2):checked~.btn label:nth-child(2),
+.sec01 .theme input[type=radio]:nth-child(3):checked~.btn label:nth-child(3),
+.sec01 .theme input[type=radio]:nth-child(4):checked~.btn label:nth-child(4),
+.sec01 .theme input[type=radio]:nth-child(5):checked~.btn label:nth-child(5),
+.sec01 .theme input[type=radio]:nth-child(6):checked~.btn label:nth-child(6),
+.sec01 .theme input[type=radio]:nth-child(7):checked~.btn label:nth-child(7),
+.sec01 .theme input[type=radio]:nth-child(8):checked~.btn label:nth-child(8),
+.sec01 .theme input[type=radio]:nth-child(9):checked~.btn label:nth-child(9){
+    background: #455356;
+    color: #fff;
+}
+.sec02{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.sec02 .themeinfo{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec02 .themeinfo.on{
+    display: flex;
+}
+.sec02 .themeinfo > div{
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+    padding: 40px 40px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    border-bottom: 1px solid #bababa;
+}
+.sec02 .themeinfo > div img{
+    width: 100%;
+    max-width: 220px;
+    object-fit: cover;
+}
+.sec02 .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    align-items: center;
+    width: 100%;
+}
+.sec02 .info > div{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sec02 .info > div p{
+    font-family: 'Noto Sans Kr';
+    font-size: 18px;
+}
+.sec02 .info .genre{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.sec02 .info .genre p{
+    font-size: 16px;
+}
+.sec02 .info .time{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.sec02 .info .time > div{
+    flex: 1 1 20%;
+    max-width: 167.7px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 30px;
+    background: #ffed8d;
+    border: 1px solid #ffe145;
+}
+.sec02 .info .time > div.choose{
+    border: 1px solid #d3d3d3;
+    background: none;
+}
+.sec02 .info .time > div.choose p{
+    color: #757575;
+}
+.sec02 .info .time > div p{
+    color: #000;
+    font-family: 'Noto Sans Kr';
+    font-size: 18px;
+    text-align: center;
+}
+.sec02 .info .time > div p:nth-child(2){
+    font-size: 13px;
 }
 @media screen and (max-width:768px) {
     .toplogo{
