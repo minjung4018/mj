@@ -246,6 +246,11 @@ header > label{
 .sec02 .info > div p{
     font-family: 'Noto Sans Kr';
     font-size: 18px;
+    font-weight: 600;
+}
+.sec02 .info > div:nth-child(2) p{
+    font-size: 15px;
+    font-weight: 400;
 }
 .sec02 .info .genre{
     display: flex;
@@ -273,10 +278,12 @@ header > label{
     padding: 5px 30px;
     background: #ffed8d;
     border: 1px solid #ffe145;
+    cursor: pointer;
 }
 .sec02 .info .time > div.choose{
     border: 1px solid #d3d3d3;
     background: none;
+    cursor: initial;
 }
 .sec02 .info .time > div.choose p{
     color: #757575;
@@ -289,6 +296,7 @@ header > label{
 }
 .sec02 .info .time > div p:nth-child(2){
     font-size: 13px;
+    font-weight: 400;
 }
 footer{
     width: 100%;
@@ -338,6 +346,13 @@ footer .btn a{
     background: rgb(70, 85, 43);
 }
 @media screen and (max-width:1100px) {
+    .sec02 .themeinfo > div{
+        width: 100%;
+        padding: 20px;
+    }
+    .sec02 .info .time > div{
+        max-width: none;
+    }
     footer{
         margin-bottom: 20px;
     }
@@ -355,6 +370,21 @@ footer .btn a{
     
 }
 @media screen and (max-width:768px) {
+    .star,
+    .half{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20
+    }
+    .fullstar{
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20
+    }
     .toplogo{
         display: block;
     }
@@ -390,6 +420,45 @@ footer .btn a{
         gap: 40px;
         z-index: 20;
         transition: all 0.5s ease;
+    }
+    .title span:nth-child(2){
+        font-size: 16px;
+    }
+    .title span:nth-child(3){
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .sec01 .theme .btn label{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .sec02 .themeinfo > div{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .sec02 .info{
+        padding: 0;
+    }
+    .sec02 .info .time > div{
+        flex: 1 1 30%;
+        padding: 4px 25px;
+        gap: 0;
+    }
+    .sec02 .info .time > div p{
+        font-size: 16px;
+    }
+    .sec02 .info .score{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+    .sec02 .info > div p {
+        font-size: 16px;
+    }
+    .sec02 .info > div:nth-child(2) p {
+        font-size: 14px;
+        font-weight: 300;
     }
     .copy p {
         font-size: 12px;
