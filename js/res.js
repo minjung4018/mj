@@ -9,3 +9,10 @@ Array.from(btns).forEach((btn, index) => {
     })
 })
 btns[0].click()
+const times = document.querySelectorAll('.resbtn')
+Array.from(times).forEach((time) => {
+    time.addEventListener("click", function() {
+        alert(`포트폴리오용 예약화면입니다.`)
+    })
+
+})
