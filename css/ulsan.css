@@ -13,6 +13,10 @@
     text-decoration: none;
     list-style: none;
 }
+.material-symbols-outlined {
+    font-weight: 600;
+    font-size: 26px;
+}
 :root {
     --swiper-theme-color: #fff;
 }
