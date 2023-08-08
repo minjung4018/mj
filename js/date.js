@@ -1,47 +1,32 @@
-function prevMonth(date){
-    const target = new Date(date)
-    target.setDate(1)
-    target.setMonth(target.getMonth() - 1)
-    return getYmd(target)
-}
-function nextMonth(date){
-    const target = new Date(date)
-    target.setDate(1)
-    target.setMonth(target.getMonth() + 1)
-    return getYmd(target)
-}
-function getYmd(target){
-    const month = ('0' + (target.getMonth() +1)).slice(-2)
-    return[target.getFullYear(), month, '01'].join('-')
-}
-function fullDays(date){
-    const target = new Date(date)
-    const year = target.getFullYear()
-    const month = target.getMinutes()
-
-    const firstWeekDay = new Date(year, month, 1).getDay()
-    const thisDays = new Date(year, month + 1, 0).getDate()
-    const cell  = [28, 35, 42].filter(function (n) {
-        return n >= (firstWeekDay + thisDays)
-    }).shift()
-    const days = []
-    for (const i = 0; i < cell; i++){
-        days[i] = {
-            date: '',
-            dayNum: '',
-            today: false
-        }
-    }
-    const now = new Date()
-    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-    // const inDate;
-    for (const index = firstWeekDay, i = 1; i <= thisDays; index++, i++){
-        const inDate = new Date(year, month, i)
-        days[index] = {
-            date: i,
-            dayNum: inDate.getDay(),
-            today: (inDate.getTime() === today.getTime())
-        }
-    }
-    return days; 
-}
+// 풀캘린더사이트
+document.addEventListener('DOMContentLoaded', function () {
+    let calendarEl = document.querySelector('#calendar');
+    let cal = new FullCalendar.Calendar(calendarEl, {
+        headerToolbar: {
+            start: '',
+            center: 'title',
+            end: ''
+        },
+        titleFormat: {
+            month: '2-digit',
+            year: 'numeric',
+        },
+        weekday: 'narrow',
+        initialView: 'dayGridMonth',
+        fixedWeekCount: false, // 6줄 고정 풀기
+        validRange(nowDate) { // 예약 가능한 날짜
+            let startDate = endDate = nowDate;
+            return {
+                start: startDate.setDate(startDate.getDate()), // 오늘로부터
+                end: endDate.setDate(endDate.getDate() + 13) // 2주후
+            };
+        },
+        dateClick(e) { // 클릭하면 출력
+            console.log(e.date.getDate() + '일을 선택하였습니다');
+            let validDays = document.querySelectorAll('#calendar .fc-daygrid-day');
+            for (const day of validDays) day.classList.remove("select");
+            e.dayEl.classList.add("select");
+        },
+    });
+    cal.render();
+});

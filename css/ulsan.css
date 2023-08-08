@@ -1,0 +1,1071 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,0");
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: keep-all;
+    /* outline: 1px solid red; */
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --swiper-theme-color: #fff;
+}
+.search{
+    color: #fff;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 200,
+    'opsz' 48
+}
+.search.black{
+    color: #000;
+}
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+    position: fixed;
+    z-index: 100;
+}
+header.white{
+    background: #fff;
+}
+header > div {
+    width: 100%;
+    height: 100%;
+    padding: 0 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+header > div > a {
+    display: flex;
+    align-items: center;
+}
+.inner > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.inner input[type=checkbox]{
+    display: none;
+}
+.inner input[type=checkbox] + label > span.open {
+    display: block;
+    cursor: pointer;
+}
+.inner input[type=checkbox] + label > span.close {
+    display: none;
+}
+.inner input[type=checkbox]:checked + label > span.open {
+    display: none;
+}
+.inner input[type=checkbox]:checked + label > span.close {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+}
+.inner .gnb{
+    height: 100%;
+}
+.inner .gnb a{
+    display: flex;
+    height: 100%;
+    padding: 0 25px;
+    align-items: center;
+}
+.inner > label{
+    display: none;
+    color: #fff;
+}
+.inner > label.black{
+    color: #000;
+}
+.gnb label{
+    display: none;
+}
+.gnb .none{
+    display: none;
+    position: absolute;
+    background: #fff;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 515px;
+    flex-direction: row;
+    padding: 30px;
+}
+.gnb .subbox{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    padding: 0 150px;
+}
+.gnb .subbox h1{
+    color: #1b1b63;
+    width: 200px;
+}
+.inner .gnb:hover .none{
+    display: flex;
+}
+.gnb .sub{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+}
+.gnb .sub a{
+    font-family: 'Noto Sans Kr';
+    color: #444;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.gnb .sub a:hover{
+    background: #0042a5;
+    color: #fff;
+}
+.gnb .sub a::after{
+    content: '\21C0';
+    display: block;
+    opacity: 0;
+}
+.gnb .sub a:hover::after{
+    opacity: 100;
+}
+.gnb .sub::after{
+    content: '';
+    background: url(../img/ulsan/gnb_img.png) 0 0 no-repeat;
+    width: 345px;
+    height: 345px;
+    right: 100px;
+    top: 0;
+    position: absolute;
+}
+.gnb span{
+    display: block;
+    color: #fff;
+    font-family: 'Noto Sans Kr';
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #000;
+}
+.gnb span.black{
+    color: #444;
+    text-shadow: none;
+    font-weight: 500;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.sec01 .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    /* animation: scale 2s ease-in forwards; */
+}
+.sec01 .swiper-slide .textbox{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    gap: 20px;
+    padding: 50px 150px;
+}
+.sec01 .swiper-slide .textbox h2,
+.sec01 .swiper-slide .textbox h1{
+    color: #fff;
+    font-size: 34px;
+    font-weight: 600;
+    font-family: 'Noto Sans Kr';
+    text-shadow: 2px 2px 7px #000;
+}
+.sec01 .swiper-slide .textbox h1{
+    font-size: 50px;
+}
+.swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    background: #fff;
+}
+.sec02{
+    width: 100%;
+    margin: 100px 0;
+    z-index: 1;
+    background: #f3f9ff;
+    padding: 50px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.sec02 .swiper-slide{
+    overflow: hidden;
+}
+.sec02 .inner{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.sec02 .inner .img{
+    height: 176px;
+    overflow: hidden;
+}
+.sec02 .inner img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.sec02 .text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    min-height: 135px;
+    background: #fff;
+}
+.sec02 .text::before{
+    content: '';
+    background: url(../img/ulsan/wave.png) no-repeat;
+    display: block;
+    width: 101%;
+    height: 50px;
+    background-size: contain;
+    position: absolute;
+    top: -21px;
+    left: 0;
+}
+.sec02 .text h2{
+    font-family: 'Noto Sans Kr';
+    font-weight: 400;
+    color: #000;
+    font-size: 20px;
+}
+.sec02 .text > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.sec02 .text p{
+    color: #222;
+    font-size: 16px;
+    font-family: 'Noto Sans Kr';
+}
+.sec02 .text > div::after{
+    content: '';
+    background: url(../img/ulsan/add.png) no-repeat;
+    background-size: contain;
+    display: block;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #888;
+    border-radius: 20px;
+    padding: 3px;
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% - 20px/2);
+    transition: transform 1s ease;
+}
+.sec02 .swiper-slide a{
+    display: block;
+    box-shadow: 2px 2px 5px #000;
+}
+.sec02 .swiper-slide a:hover .text > div::after{
+    transform: rotate(360deg);
+    bottom: 10px;
+}
+.sec02 .swiper-slide a:hover .img{
+    height: 136px;
+}
+.sec02 .swiper-slide a:hover .text{
+    min-height: 175px;
+}
+.sec02 .swiper-button-next::after,
+.sec02 .swiper-button-prev::after{
+    font-size: 20px;
+}
+.sec02 .swiper-button-next{
+    right: -50px;
+    color: #333;
+}
+.sec02 .swiper-button-prev{
+    left: -50px;
+    color: #333;
+}
+.sec02 h1,
+.sec03 h1,
+.sec04 h1{
+    color: #1b1b63;
+    font-size: 34px;
+    font-weight: 500;
+    font-family: 'Black Han Sans', sans-serif;
+}
+.sec03{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.top span{
+    font-size: 17px;
+    font-family: 'Noto Sans kr';
+    color: #333;
+    text-align: center;
+}
+.sec03 ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sec03 li{
+    position: relative;
+    height: 130px;
+}
+.sec03 ul a{
+    display: flex;
+    align-items: end;
+    width: 150px;
+    height: 100%;
+}
+.sec03 ul span{
+    color: #444;
+    font-family: 'Noto Sans Kr';
+    font-weight: 200;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+.sec03 ul a p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+    background: url(../img/ulsan/icon_ir.png) no-repeat;
+}
+.sec03 ul a p.icon02::before{
+    background-position: -178px 0;
+}
+.sec03 ul a p.icon03::before{
+    background-position: -349px 0;
+}
+.sec03 ul a p.icon04::before{
+    background-position: -521px 0;
+}
+.sec03 ul a p.icon05::before{
+    background-position: -696px 0;
+}
+.sec03 ul a p.icon06::before{
+    background-position: -867px 0;
+}
+.sec03 ul a p.icon07::before{
+    background-position: -1043px 0;
+}
+.sec04{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin: 100px 0;
+}
+.sec04 .articlebox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1200px;
+}
+.sec04 .article{
+    flex: 1 1 30%;
+    position: relative;
+}
+.sec04 .article img{
+    width: 100%;
+    display: block;
+}
+.sec04 .article > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+.sec04 .article h2{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.sec04 .article span{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 40px;
+    transform: translateY(25px);
+    left: calc(50% - 38px/2);
+    transition: all 0.5s ease-in-out ;
+    opacity: 0;
+}
+.sec04 .article:hover span{
+    opacity: 100;
+    transform: translateY(0px);
+}
+.sec05{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+    position: relative;
+}
+.sec05 img{
+    object-fit: cover;
+    display: block;
+    width: 100%;
+}
+.sec05 .traveltext{
+    width: 35%;
+    height: 460px;
+}
+.sec05 .travel{
+    width: 660px;
+}
+.sec05 .traveltext{
+    position: relative;
+    width: 35%;
+    /* max-width: 340px; */
+}
+.sec05 .textbox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+}
+.sec05 .textbox h1{
+    font-family: 'Noto Sans Kr';
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    color: rgba(196, 224, 181, 0.664);
+}
+.sec05 .textbox h2{
+    font-size: 24px;
+    font-family: 'Noto Sans Kr';
+    font-weight: 500;
+}
+.sec05 .textbox h3{
+    font-size: 18px;
+    font-family: 'Noto Sans Kr';
+    font-weight: 300;
+    color: #333;
+}
+.sec05 .traveltext .swiper-slide{
+    height: 100%;
+    padding: 15px;
+}
+.sec05 .swiper-button-next{
+    top: 90px;
+    left: initial;
+    right: 40px;
+    color: #888;
+}
+.sec05 .swiper-button-prev{
+    top: 90px;
+    left: initial;
+    right: 80px;
+    color: #888;
+}
+.sec05 .swiper-button-next:after,
+.sec05 .swiper-button-prev:after{
+    font-size: 15px;
+    font-weight: 700;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 0;
+}
+footer .up{
+    width: 100%;
+    background: #586d58;
+}
+footer .buttons{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto; 
+    position: relative;
+}
+footer button{
+    display: flex;
+    flex-direction: row;
+    background: #586d58;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    border-right: 1px solid #888;
+}
+footer button:first-child{
+    border-left: 1px solid #888;
+}
+footer button span{
+    font-family: 'Noto Sans Kr';
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+footer button span::after{
+    content: '▴';
+    display: block;
+    color: #fff;
+}
+footer .sitebox{
+    position: absolute;
+    top: -149px;
+    left: 0;
+}
+footer .sitetab{
+    display: none;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 1000px;
+    height: 150px;
+    padding: 20px;
+    border: 1px solid #999;
+}
+footer .sitetab.on{
+    display: flex;
+}
+footer .sitetab a{
+    font-size: 15px;
+    font-family: 'Noto Sans Kr';
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: #000;
+}
+footer .sitetab a::before{
+    content: '•';
+    display: block;
+}
+footer .bottom{
+    width: 100%;
+    padding: 60px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+footer .bottom .right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .bottom .right > p{
+    font-size: 14px;
+}
+footer .fotbox01{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+footer .fotbox01 a{
+    color: #000;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+footer .fotbox01 a::before{
+    content: '';
+    width: 1px;
+    height: 14px;
+    display: block;
+    border-left: 1px solid #777;
+}
+footer .fotbox01 a:first-child::before{
+    display: none;
+}
+footer .fotbox02{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+footer .fotbox02 > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+footer .fotbox02 p{
+    font-size: 14px;
+}
+footer .fotbox02 > p{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Noto Sans Kr';
+    color: #444;
+}
+/* @keyframes scale{
+    0%{
+        transform: scale(1.0);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+} */
+@media screen and (max-width:1200px) {
+    header > div{
+        padding: 0 30px;
+    }
+    .gnb span{
+        font-size: 20px;
+    }
+    .gnb .none{
+        height: 470px;
+    }
+    .gnb .subbox{
+        padding: 0 30px;
+        justify-content: flex-start;
+    }
+    .gnb .subbox h1{
+        font-size: 26px;
+        width: 150px;
+    }
+    .gnb .sub a{
+        font-size: 16px;
+    }
+    .sec01 .swiper-slide .textbox h2{
+        font-size: 22px;
+    }
+    .sec01 .swiper-slide .textbox h1{
+        font-size: 32px;
+    }
+    .sec01 .swiper-slide .textbox{
+        padding: 30px 70px;
+    }
+    .sec02{
+        margin: 50px 0;
+        gap: 40px;
+    }
+    .sec02 .inner{
+        padding: 40px;
+    }
+    .sec02 .swiper-button-next{
+        right: 0;
+    }
+    .sec02 .swiper-button-prev{
+        left: 0;
+    }
+    .sec02 .inner .img{
+        height: initial;
+    }
+    .sec02 .text::before {
+        width: 101%;
+        height: 50px;
+        background-size: contain;
+        position: absolute;
+        top: -20%;
+        left: 0;
+    }
+    .sec02 .swiper-slide{
+        background: #fff;
+    }
+    .sec02 .swiper-slide a .text{
+        min-height: initial;
+        height: 160px;
+    }
+    .sec02 .swiper-slide a:hover .img{
+        height: initial;
+    }
+    .sec02 .swiper-slide a:hover .text{
+        min-height: 100%;
+    }
+    .sec02 .text > div::after{
+        bottom: -40px;
+    }
+    .sec02 .text > div{
+        height: 55px;
+    }
+    .sec03{
+        padding: 50px 20px;
+    }
+    .sec03 ul{
+        padding: 0 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+    .sec03 ul a{
+        width: 130px;
+    }
+    .sec03 ul a p::before{
+        width: 130px;
+        left: -10px;
+    }
+    .sec03 li{
+        display: flex;
+        justify-content: center;
+    }
+    .sec04{
+        padding: 20px;
+    }
+    .sec04 .article > div{
+        padding: 10px;
+    }
+    .sec04 .article h2{
+        font-size: 20px;
+    }
+    .sec04 .article span{
+        font-size: 24px;
+        bottom: 30px;
+        left: calc(50% - 26px/2);
+    }
+    .sec05 .travel{
+        width: 100%;
+    }
+    .sec05 .traveltext{
+        width: 50%;
+        min-width: 320px;
+    }
+    .sec05 .textbox h1{
+        font-size: 70px;
+    }
+    .sec05 .textbox h2 {
+        font-size: 20px;
+    }
+    .sec05 .textbox h3{
+        font-size: 15px;
+    }
+    footer .up{
+        display: none;
+    }
+    footer .fotlogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        border-top: 1px solid #ddd;
+    }
+    footer .bottom{
+        flex-direction: column;
+        padding: 20px;
+    }
+    footer .bottom .right{
+        align-items: center;
+    }
+    footer .bottom .right > p{
+        text-align: center;
+    }
+    footer .fotbox02 > p{
+        font-size: 26px;
+    }
+}
+@media screen and (max-width:1010px) {
+    header{
+        height: 50px
+    }
+    header > div{
+        padding: 0 50px 0 20px;
+    }
+    header > div img{
+        object-fit: cover;
+        width: 150px;
+    }
+    .inner > label{
+        display: block;
+        position: absolute;
+        top: 13px;
+        right: 12px;
+        z-index: 101;
+    }
+    .inner > ul{
+        display: flex;
+        position: fixed;
+        height: 100vh;
+        z-index: 100;
+        width: 70%;
+        max-width: 400px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 70px 20px;
+        gap: 50px;
+        flex-direction: column;
+        background: #002864;
+        right: -100%;
+        transition: all 0.5s; 
+    }
+    .inner > input[type=checkbox]:checked ~ ul{
+        right: 0;
+    }
+    .inner .gnb{
+        height: initial;
+        width: 100%;
+        padding: 0;
+    }
+    .inner .gnb > a {
+        display: none;
+    }
+    .inner .gnb label{
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Noto Sans Kr';
+        padding: 5px;
+        cursor: pointer;
+    }
+    .inner .gnb label::after{
+        content: '▾';
+        display: block;
+        color: #efefff;
+    }
+    .inner .gnb:hover .none{
+        display: none;
+    }
+    .gnb .none{
+        display: none;
+        position: initial;
+        background: none;
+        padding: 20px;
+        height: initial;
+    }
+    .gnb .sub{
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .gnb .subbox{
+        padding: 0;
+        height: 100%;
+    }
+    .gnb .subbox h1{
+        display: none;
+    }
+    .gnb .sub::after{
+        display: none;
+    }
+    .gnb .sub a{
+        color: #fff;
+        border-radius: initial;
+    }
+    .gnb .sub a:hover{
+        background: none;
+    }
+    .gnb .sub a:hover::after{
+        opacity: 0;
+    }
+    .gnb > input[type=checkbox]:checked ~ .none{
+        display: flex;
+    }
+    .sec02 .text::before {
+        display: none;
+    }
+    .sec02 .text > div::after{
+        display: none;
+    }
+}
+@media screen and (max-width:750px){
+    
+    .sec02 h1, .sec03 h1, .sec04 h1{
+        font-size: 28px;
+    }
+    .sec01 .swiper-button-next::after,
+    .sec01 .swiper-button-prev::after{
+        font-size: 16px;
+        font-weight: 900;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+    }
+    .sec01 .swiper-slide .textbox{
+        padding: 20px 40px;
+        gap: 10px;
+    }
+    .sec01 .swiper-slide .textbox h2{
+        font-size: 17px;
+    }
+    .sec01 .swiper-slide .textbox h1{
+        font-size: 20px;
+    }
+    .sec02{
+        margin: 30px 0;
+        gap: 20px;
+        padding: 30px 0;
+    }
+    .sec02 .text h2{
+        font-size: 18px;
+    }
+    .sec02 .text p{
+        font-size: 15px;
+    }
+    .top span{
+        font-size: 16px;
+    }
+    .sec03{
+        gap: 50px;
+    }
+    .sec03 li{
+        height: initial;
+        flex: 1 1 45%;
+    }
+    .sec03 ul a p::before{
+        background: none;
+    }
+    .sec03 ul a{
+        background: #A9CCFF;
+        padding: 5px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 270px;
+        min-width: 220px;
+    }
+    .sec03 ul span{
+        color: #37578E;
+    }
+    .sec04{
+        gap: 50px;
+    }
+    .sec04 .article{
+        flex: 1 1 40%;
+        min-width: 170px;
+    }
+    .sec04 .article h2{
+        font-size: 15px;
+    }
+    .sec05{
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+    .sec05 .traveltext{
+        width: 100%;
+        min-width: initial;
+        height: initial;
+    }
+    .sec05 .traveltext .swiper-slide{
+        padding: 0;
+    }
+    .sec05 .textbox h1{
+        margin-bottom: 20px;
+        font-size: 55px;
+    }
+    .sec05 .swiper-button-prev,
+    .sec05 .swiper-button-next{
+        top: 71px;
+    }
+    .sec05 .textbox h2{
+        font-size: 18px;
+    }
+    .sec05 .textbox h3{
+        font-size: 14px;
+    }
+    footer .fotbox01{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    footer .fotbox01 a{
+        font-size: 13px;
+    }
+    footer .fotbox02{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+    footer .fotbox02 p {
+        font-size: 13px;
+        text-align: center;
+    }
+    footer .fotbox02 > p{
+        font-size: 20px;
+    }
+    footer .bottom .right > p{
+        font-size: 12px;
+    }
+}

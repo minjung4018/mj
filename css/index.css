@@ -370,9 +370,9 @@ header{
     background: #ffeaa6;
     position: absolute;
     top: -5px;
-    left: 8px;
-    width: 6px;
-    height: 6px;
+    left: 13px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
 }
 .sec04{
@@ -793,16 +793,11 @@ footer .right a:nth-of-type(3)::before{
     .sec03{
         height: 150px;
     }
-    .sec03 p::before,
-    .sec03 p::after,
-    .sec03 strong::before,
-    .sec03 strong::after,
-    .sec03 .banner::before,
-    .sec03 .banner::after{
-        display: none;
-    }
     .sec03 p {
         font-size: 24px;
+    }
+    .sec03 span::after{
+        left: 9px;
     }
     .sec04 .left .article {
         flex-direction: column;
