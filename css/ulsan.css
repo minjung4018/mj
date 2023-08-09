@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Noto+Sans:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,0");
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@700&display=swap');
@@ -19,6 +18,7 @@
 }
 :root {
     --swiper-theme-color: #fff;
+    --swiper-navigation-size: 36px;
 }
 .search{
     color: #fff;
@@ -27,9 +27,6 @@
     'wght' 500,
     'GRAD' 200,
     'opsz' 48
-}
-.search.black{
-    color: #000;
 }
 header{
     width: 100%;
@@ -43,6 +40,14 @@ header{
 }
 header.white{
     background: #fff;
+}
+header.white .search{
+    color: #000;
+}
+header.white .gnb span{
+    color: #444;
+    text-shadow: none;
+    font-weight: 500;
 }
 header > div {
     width: 100%;
@@ -95,7 +100,7 @@ header > div > a {
     display: none;
     color: #fff;
 }
-.inner > label.black{
+header.white .inner > label{
     color: #000;
 }
 .gnb label{
@@ -127,9 +132,6 @@ header > div > a {
     color: #1b1b63;
     width: 200px;
 }
-.inner .gnb:hover .none{
-    display: flex;
-}
 .gnb .sub{
     display: flex;
     flex-direction: column;
@@ -147,17 +149,10 @@ header > div > a {
     justify-content: space-between;
     border-radius: 20px;
 }
-.gnb .sub a:hover{
-    background: #0042a5;
-    color: #fff;
-}
 .gnb .sub a::after{
     content: '\21C0';
     display: block;
     opacity: 0;
-}
-.gnb .sub a:hover::after{
-    opacity: 100;
 }
 .gnb .sub::after{
     content: '';
@@ -175,11 +170,6 @@ header > div > a {
     font-size: 25px;
     letter-spacing: 3px;
     text-shadow: 0 0 5px #000;
-}
-.gnb span.black{
-    color: #444;
-    text-shadow: none;
-    font-weight: 500;
 }
 .swiper {
     width: 100%;
@@ -218,6 +208,39 @@ header > div > a {
     width: 15px;
     height: 15px;
     background: #fff;
+}
+.weather-box{
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    width: 150px;
+    height: 150px;
+    border-radius:80px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+}
+.weather-box > div{
+    width: 70px;
+}
+.weather-box span{
+    color: #fff;
+    font-family: 'Noto Sans Kr';
+    font-size: 18px;
+    font-weight: lighter;
+}
+.weather-box p{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Noto Sans Kr';
+}
+.weather-box img{
+    display: block;
 }
 .sec02{
     width: 100%;
@@ -312,16 +335,6 @@ header > div > a {
 .sec02 .swiper-slide a{
     display: block;
     box-shadow: 2px 2px 5px #000;
-}
-.sec02 .swiper-slide a:hover .text > div::after{
-    transform: rotate(360deg);
-    bottom: 10px;
-}
-.sec02 .swiper-slide a:hover .img{
-    height: 136px;
-}
-.sec02 .swiper-slide a:hover .text{
-    min-height: 175px;
 }
 .sec02 .swiper-button-next::after,
 .sec02 .swiper-button-prev::after{
@@ -472,13 +485,10 @@ header > div > a {
     bottom: 40px;
     transform: translateY(25px);
     left: calc(50% - 38px/2);
-    transition: all 0.5s ease-in-out ;
+    transition: all 0.5s ease ;
     opacity: 0;
 }
-.sec04 .article:hover span{
-    opacity: 100;
-    transform: translateY(0px);
-}
+
 .sec05{
     display: flex;
     flex-direction: row;
@@ -556,6 +566,9 @@ header > div > a {
     font-size: 15px;
     font-weight: 700;
 }
+footer .buttons input{
+    display: none;
+}
 footer{
     display: flex;
     flex-direction: column;
@@ -573,7 +586,7 @@ footer .buttons{
     margin: 0 auto; 
     position: relative;
 }
-footer button{
+footer label{
     display: flex;
     flex-direction: row;
     background: #586d58;
@@ -584,10 +597,13 @@ footer button{
     width: 200px;
     border-right: 1px solid #888;
 }
-footer button:first-child{
+footer input[type="radio"]:checked + label{
+    background: #334133;
+}
+footer .buttons > div:first-child label{
     border-left: 1px solid #888;
 }
-footer button span{
+footer label span{
     font-family: 'Noto Sans Kr';
     font-size: 15px;
     font-weight: 300;
@@ -596,26 +612,27 @@ footer button span{
     display: flex;
     justify-content: space-between;
 }
-footer button span::after{
+footer label span::after{
     content: '▴';
     display: block;
     color: #fff;
 }
 footer .sitebox{
     position: absolute;
-    top: -149px;
-    left: 0;
 }
 footer .sitetab{
+    position: absolute;
     display: none;
     flex-wrap: wrap;
+    top: -149px;
+    left: 0;
     gap: 50px;
     width: 1000px;
     height: 150px;
     padding: 20px;
     border: 1px solid #999;
 }
-footer .sitetab.on{
+footer input[type="radio"]:checked ~ .sitetab{
     display: flex;
 }
 footer .sitetab a{
@@ -699,6 +716,32 @@ footer .fotbox02 > p{
         transform: scale(1.1);
     }
 } */
+@media(hover: hover) and (pointer: fine) {
+    .inner .gnb:hover .none{
+        display: flex;
+    }
+    .gnb .sub a:hover{
+        background: #0042a5;
+        color: #fff;
+    }
+    .gnb .sub a:hover::after{
+        opacity: 100;
+    }
+    .sec02 .swiper-slide a:hover .text > div::after{
+        transform: rotate(360deg);
+        bottom: 10px;
+    }
+    .sec02 .swiper-slide a:hover .img{
+        height: 136px;
+    }
+    .sec02 .swiper-slide a:hover .text{
+        min-height: 175px;
+    }
+    .sec04 .article:hover span{
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
 @media screen and (max-width:1200px) {
     header > div{
         padding: 0 30px;
@@ -940,11 +983,11 @@ footer .fotbox02 > p{
     .gnb .sub a:hover{
         background: none;
     }
-    .gnb .sub a:hover::after{
-        opacity: 0;
-    }
     .gnb > input[type=checkbox]:checked ~ .none{
         display: flex;
+    }
+    .weather-box{
+        display: none;
     }
     .sec02 .text::before {
         display: none;
@@ -983,6 +1026,9 @@ footer .fotbox02 > p{
         gap: 20px;
         padding: 30px 0;
     }
+    .sec02 .swiper-slide a .text{
+        height: 130px;
+    }
     .sec02 .text h2{
         font-size: 18px;
     }
@@ -995,9 +1041,12 @@ footer .fotbox02 > p{
     .sec03{
         gap: 50px;
     }
+    .sec03 ul{
+        padding: 0;
+    }
     .sec03 li{
         height: initial;
-        flex: 1 1 45%;
+        flex: 0 1 45%;
     }
     .sec03 ul a p::before{
         background: none;
@@ -1007,11 +1056,17 @@ footer .fotbox02 > p{
         padding: 5px;
         border-radius: 20px;
         width: 100%;
-        max-width: 270px;
-        min-width: 220px;
+        max-width: 680px;
+        min-width: 160px;
     }
     .sec03 ul span{
         color: #37578E;
+    }
+    .sec03 ul a:active{
+        background: #37578E;
+    }
+    .sec03 ul a:active span{
+        color: #fff;
     }
     .sec04{
         gap: 50px;
@@ -1039,9 +1094,13 @@ footer .fotbox02 > p{
         margin-bottom: 20px;
         font-size: 55px;
     }
-    .sec05 .swiper-button-prev,
     .sec05 .swiper-button-next{
         top: 71px;
+        right: 0;
+    }
+    .sec05 .swiper-button-prev{
+        top: 71px;
+        right: 40px;
     }
     .sec05 .textbox h2{
         font-size: 18px;
