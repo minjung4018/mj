@@ -36,8 +36,8 @@ window.addEventListener('resize', () => {
 });
 document.addEventListener('scroll', () => {
     let scroll = window.scrollY;
-    if (scroll > 250) { header.classList.add('white'); }
-    else if (scroll < 249) { header.classList.remove('white'); }
+    if (scroll > 230) { header.classList.add('white'); }
+    else if (scroll < 229) { header.classList.remove('white'); }
 });
 // 푸터
 const b01 = document.querySelectorAll('#btn01')

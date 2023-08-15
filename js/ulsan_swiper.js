@@ -5,18 +5,19 @@ var swiper = new Swiper(".mainslide", {
     },
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
-  });
+});
 var swiper2 = new Swiper(".recomm", {
     slidesPerView: 1,
     spaceBetween: 50,
     slidesPerGroup: 1,
+    loop: true,
     navigation: {
         nextEl: ".sec02 .swiper-button-next",
         prevEl: ".sec02 .swiper-button-prev",
@@ -57,3 +58,12 @@ var swiper4 = new Swiper(".travel", {
         swiper: swiper3,
     },
 });
+let api = 'https://api.openweathermap.org/data/2.5/weather?lat=35&lon=129&appid=38d9c92c8bdbd2fe5a4e473e1986f44f&units=metric';
+fetch(api)
+    .then((response) => response.json())
+    .then(function (result) {
+        let icon = `<img src="img/ulsan/${result.weather[0].icon}.svg" alt="${result.weather[0].description}">`;
+        let temp = result.main.temp.toFixed(1);
+        document.querySelector('.weather').innerHTML = icon
+        document.querySelector('.temp').append(`${temp}`);
+    });

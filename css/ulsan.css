@@ -113,7 +113,7 @@ header.white .inner > label{
     top: 60px;
     left: 0;
     width: 100%;
-    height: 515px;
+    height: 530px;
     flex-direction: row;
     padding: 30px;
 }
@@ -574,6 +574,7 @@ footer{
     flex-direction: column;
     width: 100%;
     padding: 50px 0;
+    background: #eee;
 }
 footer .up{
     width: 100%;
@@ -708,14 +709,17 @@ footer .fotbox02 > p{
     font-family: 'Noto Sans Kr';
     color: #444;
 }
-/* @keyframes scale{
+@keyframes updown{
     0%{
-        transform: scale(1.0);
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-7px);
     }
     100%{
-        transform: scale(1.1);
+        transform: translateY(0px);
     }
-} */
+}
 @media(hover: hover) and (pointer: fine) {
     .inner .gnb:hover .none{
         display: flex;
@@ -736,6 +740,12 @@ footer .fotbox02 > p{
     }
     .sec02 .swiper-slide a:hover .text{
         min-height: 175px;
+    }
+    .sec03 ul a:hover p::before{
+        animation: updown 0.5s 1 ease-in-out;
+    }
+    .sec03 ul a:hover span{
+        color: #002864;
     }
     .sec04 .article:hover span{
         opacity: 100;
@@ -877,6 +887,7 @@ footer .fotbox02 > p{
     }
     footer{
         border-top: 1px solid #ddd;
+        background: none;
     }
     footer .bottom{
         flex-direction: column;
@@ -955,11 +966,13 @@ footer .fotbox02 > p{
         display: none;
     }
     .gnb .none{
-        display: none;
+        display: block;
         position: initial;
         background: none;
-        padding: 20px;
-        height: initial;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
     }
     .gnb .sub{
         gap: 10px;
@@ -985,6 +998,10 @@ footer .fotbox02 > p{
     }
     .gnb > input[type=checkbox]:checked ~ .none{
         display: flex;
+        height: initial;
+        padding: 20px;
+        transition: height 0.5s ease;
+
     }
     .weather-box{
         display: none;
@@ -1043,10 +1060,13 @@ footer .fotbox02 > p{
     }
     .sec03 ul{
         padding: 0;
+        gap: 10px;
+        width: 100%;
     }
     .sec03 li{
         height: initial;
-        flex: 0 1 45%;
+        flex: 0 1 47%;
+        width: 100%;
     }
     .sec03 ul a p::before{
         background: none;
@@ -1056,8 +1076,8 @@ footer .fotbox02 > p{
         padding: 5px;
         border-radius: 20px;
         width: 100%;
-        max-width: 680px;
-        min-width: 160px;
+        max-width: 690px;
+        min-width: 250px;
     }
     .sec03 ul span{
         color: #37578E;
@@ -1073,7 +1093,7 @@ footer .fotbox02 > p{
     }
     .sec04 .article{
         flex: 1 1 40%;
-        min-width: 170px;
+        min-width: 200px;
     }
     .sec04 .article h2{
         font-size: 15px;
