@@ -50,6 +50,7 @@ if(b01.checked){
         b01.checked = false
     })
 }
+// 푸터
 // const btns = document.querySelectorAll('.up button');
 // const sites = document.querySelectorAll('.sitetab');
 // Array.from(btns).forEach((btn, index) => {

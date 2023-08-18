@@ -199,7 +199,7 @@ header.white .inner > label{
     font-size: 34px;
     font-weight: 600;
     font-family: 'Noto Sans Kr';
-    text-shadow: 2px 2px 7px #000;
+    text-shadow: 2px 2px 7px #000000cc;
 }
 .sec01 .swiper-slide .textbox h1{
     font-size: 50px;
@@ -566,15 +566,15 @@ header.white .inner > label{
     font-size: 15px;
     font-weight: 700;
 }
-footer .buttons input{
-    display: none;
-}
 footer{
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 50px 0;
     background: #eee;
+}
+footer .buttons input{
+    display: none;
 }
 footer .up{
     width: 100%;
