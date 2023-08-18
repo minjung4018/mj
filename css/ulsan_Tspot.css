@@ -11,6 +11,10 @@
     text-decoration: none;
     list-style: none;
 }
+.material-symbols-outlined {
+    font-weight: 600;
+    font-size: 26px;
+}
 .search{
     color: #fff;
     font-variation-settings:
@@ -213,6 +217,8 @@ header.white .inner > label{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .btns span,
 .btns button{
@@ -226,7 +232,7 @@ header.white .inner > label{
 }
 .btns span.on,
 .btns button.on{
-    background: #002864;
+    background: #0043a7;
     color: #fff;
 }
 .sec02 .cards{
@@ -243,6 +249,8 @@ header.white .inner > label{
     width: 30%;
     border: 1px solid #bbb;
     height: 329px;
+    flex: 1 1 30%;
+    min-width: 270px;
 }
 .card.off{ display: none; }
 .card img{
@@ -378,6 +386,12 @@ footer .fotbox02 > p{
     }
     .gnb .sub a{
         font-size: 16px;
+    }
+    .navi{
+        padding: 20px;
+    }
+    .sec02{
+        padding: 20px;
     }
     footer .fotlogo{
         display: flex;

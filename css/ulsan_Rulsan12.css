@@ -11,6 +11,10 @@
     text-decoration: none;
     list-style: none;
 }
+.material-symbols-outlined {
+    font-weight: 600;
+    font-size: 26px;
+}
 .search{
     color: #fff;
     font-variation-settings:
@@ -236,8 +240,7 @@ header.white .inner > label{
 .cards .card{
     display: flex;
     flex-direction: column;
-    flex: 0 1 30%;
-    /* box-shadow: 0 0 5px 3px #ddd; */
+    flex: 1 1 30%;
 }
 .card img{
     display: block;
@@ -377,6 +380,25 @@ footer .fotbox02 > p{
     .gnb .sub a{
         font-size: 16px;
     }
+    .navi{
+        padding: 20px;
+    }
+    .sec02{
+        padding: 20px;
+    }
+    .sec02 h2{
+        font-size: 26px;
+    }
+    .sec02 > div p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .sec02 > div p:first-child{
+        font-size: 25px;
+    }
+    .cards .card{
+        min-width: 270px;
+    }
     footer .fotlogo{
         display: flex;
         justify-content: center;
@@ -496,6 +518,15 @@ footer .fotbox02 > p{
     }
 }
 @media screen and (max-width:750px) {
+    .sec02 h2{
+        font-size: 22px;
+    }
+    .sec02 > div p{
+        font-size: 16px;
+    }
+    .sec02 > div p:first-child{
+        font-size: 22px;
+    }
     footer .fotbox01{
         flex-wrap: wrap;
         justify-content: center;

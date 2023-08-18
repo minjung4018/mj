@@ -39,17 +39,17 @@ document.addEventListener('scroll', () => {
     if (scroll > 230) { header.classList.add('white'); }
     else if (scroll < 229) { header.classList.remove('white'); }
 });
-// 푸터
-const b01 = document.querySelectorAll('#btn01')
-const b02 = document.querySelectorAll('#btn01')
-const b03 = document.querySelectorAll('#btn01')
-const b04 = document.querySelectorAll('#btn01')
 
-if(b01.checked){
-    b01.addEventListener("click", () => {
-        b01.checked = false
-    })
-}
+// const b01 = document.querySelectorAll('#btn01')
+// const b02 = document.querySelectorAll('#btn01')
+// const b03 = document.querySelectorAll('#btn01')
+// const b04 = document.querySelectorAll('#btn01')
+
+// if(b01.checked){
+//     b01.addEventListener("click", () => {
+//         b01.checked = false
+//     })
+// }
 // 푸터
 // const btns = document.querySelectorAll('.up button');
 // const sites = document.querySelectorAll('.sitetab');

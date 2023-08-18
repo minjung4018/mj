@@ -11,6 +11,10 @@
     text-decoration: none;
     list-style: none;
 }
+.material-symbols-outlined {
+    font-weight: 600;
+    font-size: 26px;
+}
 .search{
     color: #fff;
     font-variation-settings:
@@ -226,7 +230,7 @@ header.white .inner > label{
 }
 .btns span.on,
 .btns button.on{
-    background: #002864;
+    background: #0043a7;
     color: #fff;
 }
 .sec02 .cards{
@@ -378,6 +382,9 @@ footer .fotbox02 > p{
     }
     .gnb .sub a{
         font-size: 16px;
+    }
+    .navi{
+        padding: 20px;
     }
     footer .fotlogo{
         display: flex;

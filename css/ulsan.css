@@ -245,9 +245,8 @@ header.white .inner > label{
 .sec02{
     width: 100%;
     margin: 100px 0;
-    z-index: 1;
     background: #f3f9ff;
-    padding: 50px 0;
+    padding: 70px 0;
     justify-content: center;
     display: flex;
     flex-direction: column;
