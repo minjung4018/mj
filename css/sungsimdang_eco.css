@@ -279,7 +279,7 @@ header{
     cursor: pointer;
 }
 .sec01 .img > div p{
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -288,9 +288,13 @@ header{
     font-weight: 700;
     font-size: 32px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
 }
 .sec01 .img > div:hover p{
-    display: flex;
+    opacity: 100;
+    transition: all 0.5s;
+    transform: translateY(0px);
 }
 .sec01 .img > div:nth-child(1){
     background: url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;

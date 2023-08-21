@@ -295,6 +295,9 @@ header{
 .product img{
     object-fit: cover;
 }
+.product img:hover{
+    animation: scale 1 1s forwards; 
+}
 .menu01 img{
     width: 250px;
     height: 300px;
@@ -361,19 +364,10 @@ header{
 .sec03 span{
     font-weight: 700;
     position: relative;
-    color: #ffeaa6;
-    letter-spacing: 2px;
-}
-.sec03 span::after{
-    content: '';
-    display: block;
-    background: #ffeaa6;
-    position: absolute;
-    top: -5px;
-    left: 13px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
+    color: #fff;
+    letter-spacing: 3px;
+    padding: 0 3px;
+    background: linear-gradient(to top, #7baaff75 40%, transparent 40%);
 }
 .sec04{
     display: flex;
@@ -396,7 +390,7 @@ header{
     width: 750px;
     gap: 30px;
 }
-.sec04 .left a{
+.sec04 .left .title a{
     color: #000;
     font-family: 'Noto Serif';
     font-style: normal;
@@ -407,7 +401,7 @@ header{
     align-items: center;
     padding: 0 10px;
 }
-.sec04 .left a::after{
+.sec04 .left .title a::after{
     content: '';
     background: url(/repository/img/sungsimdang/add.svg) no-repeat 50% 50% / cover;
     width: 20px;
@@ -419,6 +413,7 @@ header{
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
+    color: #000;
     line-height: 29px;
 }
 .sec04 .left div:nth-child(1){
@@ -433,7 +428,7 @@ header{
     justify-content: space-between;
     gap: 20px;
 }
-.sec04 article{
+.sec04 .article a{
     height: 100%;
     object-fit: cover;
     display: flex;
@@ -570,6 +565,14 @@ footer .right a:nth-of-type(3)::before{
     width: 20px;
     height: 20px;
     display: block;
+}
+@keyframes scale{
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 @media screen and (max-width:1200px){
     .gnb input[type=checkbox] + label {
@@ -721,10 +724,10 @@ footer .right a:nth-of-type(3)::before{
         width: 90%;
         gap: 20px;
     }
-    .sec04 article{
+    .sec04 .article a{
         flex: 1 1;
     }
-    .sec04 article img{
+    .sec04 .article img{
         width: 100%;
     }
 
@@ -802,11 +805,11 @@ footer .right a:nth-of-type(3)::before{
     .sec04 .left .article {
         flex-direction: column;
     }
-    .sec04 article{
+    .sec04 .article a{
         flex: initial;
         align-items: flex-start;
     }
-    .sec04 article img{
+    .sec04 .article img{
         object-fit: cover;
         height: 40vw;
     }

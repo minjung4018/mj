@@ -250,7 +250,7 @@ header.white .inner > label{
     border: 1px solid #bbb;
     height: 329px;
     flex: 1 1 30%;
-    min-width: 270px;
+    max-width: 378px;
 }
 .card.off{ display: none; }
 .card img{
@@ -393,6 +393,10 @@ footer .fotbox02 > p{
     .sec02{
         padding: 20px;
     }
+    .card{
+        max-width: initial;
+        min-width: 270px;
+    }
     footer .fotlogo{
         display: flex;
         justify-content: center;
@@ -512,6 +516,15 @@ footer .fotbox02 > p{
     }
 }
 @media screen and (max-width:750px) {
+    .sec01 > img{
+        height: 200px;
+    }
+    .sec02 h2{
+        font-size: 25px;
+    }
+    .sec02 .btns{
+        gap: 10px;
+    }
     footer .fotbox01{
         flex-wrap: wrap;
         justify-content: center;

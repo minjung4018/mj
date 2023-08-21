@@ -8,7 +8,6 @@ const getfood = () => {
             let infotitle = info.title;
             let infoaddr = info.addr1;
             let infocode = info.cat3;
-            console.log(infocode)
             let cards = document.querySelector('.cards');
             let card = document.createElement('div');
             let imgbox = document.createElement('img');

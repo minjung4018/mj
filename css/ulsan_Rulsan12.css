@@ -518,8 +518,11 @@ footer .fotbox02 > p{
     }
 }
 @media screen and (max-width:750px) {
+    .sec01 > img{
+        height: 200px;
+    }
     .sec02 h2{
-        font-size: 22px;
+        font-size: 25px;
     }
     .sec02 > div p{
         font-size: 16px;
