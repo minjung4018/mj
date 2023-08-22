@@ -723,6 +723,9 @@ footer .fotbox02 > p{
     .inner .gnb:hover .none{
         display: flex;
     }
+    .inner .gnb:hover span{
+        color: #002864;
+    }
     .gnb .sub a:hover{
         background: #0042a5;
         color: #fff;
@@ -730,6 +733,7 @@ footer .fotbox02 > p{
     .gnb .sub a:hover::after{
         opacity: 100;
     }
+
     .sec02 .swiper-slide a:hover .text > div::after{
         transform: rotate(360deg);
         bottom: 10px;

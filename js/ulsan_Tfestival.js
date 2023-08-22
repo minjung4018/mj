@@ -53,15 +53,11 @@ Array.from(btns).forEach((btn) => {
 
         const cards = document.querySelectorAll('.card');
         let btncode1 = this.getAttribute("data-id1");
-        let btncode2 = this.getAttribute("data-id2");
         for (const card of cards) {
             card.classList.remove('off');
             let cardcode = card.getAttribute("data-code");
             if (cardcode !== btncode1) {
                 card.classList.add('off');
-            }
-            if (cardcode == btncode2) {
-                card.classList.remove('off');
             }
         }
     });
