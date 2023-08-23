@@ -67,7 +67,7 @@ header{
     padding-left: 28px;
 }
 .link > a:nth-of-type(2)::before{
-    content: url(/repository/img/sungsimdang/basket-outline.svg);
+    content: url(../img/sungsimdang/basket-outline.svg);
     top: -11px;
     left: 0px;
     position: absolute;
@@ -297,51 +297,51 @@ header{
     transform: translateY(0px);
 }
 .sec01 .img > div:nth-child(1){
-    background: url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
     border-radius: 40px 0;
 }
 .sec01 .img > div:nth-child(1):hover{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
+    url(../img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
 }
 .sec01 .img > div:nth-child(2){
-    background: url(/repository/img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
     border-radius: 0 40px;
 }
 .sec01 .img > div:nth-child(2):hover{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/repository/img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
+    url(../img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
 }
 .sec01 .img > div:nth-child(3){
-    background: url(/repository/img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
     border-radius: 0 40px;
 }
 .sec01 .img > div:nth-child(3):hover{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/repository/img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
+    url(../img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
 }
 .sec01 .img > div:nth-child(4){
-    background: url(/repository/img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
     border-radius: 40px 0;
 }
 .sec01 .img > div:nth-child(4):hover{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/repository/img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
+    url(../img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
 }
 .sec01 .img > div:nth-child(1) p::before{
-    content: url(/repository/img/sungsimdang/eco_groups.svg);
+    content: url(../img/sungsimdang/eco_groups.svg);
     display: block;
 }
 .sec01 .img > div:nth-child(2) p::before{
-    content: url(/repository/img/sungsimdang/eco_diversity.svg);
+    content: url(../img/sungsimdang/eco_diversity.svg);
     display: block;
 }
 .sec01 .img > div:nth-child(3) p::before{
-    content: url(/repository/img/sungsimdang/eco_compost.svg);
+    content: url(../img/sungsimdang/eco_compost.svg);
     display: block;
 }
 .sec01 .img > div:nth-child(4) p::before{
-    content: url(/repository/img/sungsimdang/eco_volunteer.svg);
+    content: url(../img/sungsimdang/eco_volunteer.svg);
     display: block;
 }
 .sec02{
@@ -521,6 +521,7 @@ footer .right{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 5px;
 }
 footer .right h1{
     font-family: 'Noto Sans KR';
@@ -548,21 +549,21 @@ footer .right > div{
 }
 footer .right a:nth-of-type(1)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
 }
 footer .right a:nth-of-type(2)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
 }
 footer .right a:nth-of-type(3)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
@@ -715,22 +716,28 @@ footer .right a:nth-of-type(3)::before{
     }
     .sec01 .img > div p{
         font-size: 20px;
+        opacity: 100;
+        transform: translateY(0px);
+    }
+    .sec01 .img > div:hover p{
+        opacity: 0;
+        transition: none;
     }
     .sec01 .img > div:nth-child(1){
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/repository/img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
+    url(../img/sungsimdang/eco_people.png) no-repeat 50% 50% / cover;
     }
     .sec01 .img > div:nth-child(2){
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(/repository/img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
+        url(../img/sungsimdang/eco_love.png) no-repeat 50% 50% / cover;
     }
     .sec01 .img > div:nth-child(3){
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(/repository/img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
+        url(../img/sungsimdang/eco_green.png) no-repeat 50% 50% / cover;
     }
     .sec01 .img > div:nth-child(4){
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(/repository/img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
+        url(../img/sungsimdang/eco_child.png) no-repeat 50% 50% / cover;
     }
     .sec02{
         flex-direction: column;

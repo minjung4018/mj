@@ -67,7 +67,7 @@ header{
     padding-left: 28px;
 }
 .link > a:nth-of-type(2)::before{
-    content: url(/repository/img/sungsimdang/basket-outline.svg);
+    content: url(../img/sungsimdang/basket-outline.svg);
     top: -11px;
     left: 0px;
     position: absolute;
@@ -294,19 +294,19 @@ header{
     padding-bottom: 10px;
 }
 .spot .info p:nth-child(1):before{
-    content: url(/repository/img/sungsimdang/Location.svg);
+    content: url(../img/sungsimdang/Location.svg);
     display: block;
     width: 30px;
     height: 30px;
 }
 .spot .info p:nth-child(2):before{
-    content: url(/repository/img/sungsimdang/time.svg);
+    content: url(../img/sungsimdang/time.svg);
     display: block;
     width: 30px;
     height: 30px;
 }
 .spot .info p:nth-child(3):before{
-    content: url(/repository/img/sungsimdang/phone.svg);
+    content: url(../img/sungsimdang/phone.svg);
     display: block;
     width: 30px;
     height: 30px;
@@ -362,6 +362,7 @@ footer .right{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 5px;
 }
 footer .right h1{
     font-family: 'Noto Sans KR';
@@ -389,21 +390,21 @@ footer .right > div{
 }
 footer .right a:nth-of-type(1)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
 }
 footer .right a:nth-of-type(2)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
 }
 footer .right a:nth-of-type(3)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;

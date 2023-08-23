@@ -144,6 +144,9 @@ header > label{
     position: relative;
     z-index: 1;
 }
+.sec02 .mySwiper{
+    width: 100%;
+}
 .sec02 .img img{
     width: 100%;
     height: 100%;

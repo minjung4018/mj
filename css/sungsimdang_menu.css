@@ -67,7 +67,7 @@ header{
     padding-left: 28px;
 }
 .link > a:nth-of-type(2)::before{
-    content: url(/repository/img/sungsimdang/basket-outline.svg);
+    content: url(../img/sungsimdang/basket-outline.svg);
     top: -11px;
     left: 0px;
     position: absolute;
@@ -421,6 +421,7 @@ footer .right{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 5px;
 }
 footer .right h1{
     font-family: 'Noto Sans KR';
@@ -448,21 +449,21 @@ footer .right > div{
 }
 footer .right a:nth-of-type(1)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/instagram.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
 }
 footer .right a:nth-of-type(2)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/facebook.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
 }
 footer .right a:nth-of-type(3)::before{
     content: '';
-    background: url(/repository/img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
+    background: url(../img/sungsimdang/youtube.png) no-repeat 50% 50% / cover;
     width: 20px;
     height: 20px;
     display: block;
@@ -619,7 +620,7 @@ footer .right a:nth-of-type(3)::before{
 }
 @media screen and (max-width:768px) {
     .button label{
-        font-size: 23px;
+        font-size: 20px;
         line-height: 25px;
     }
     .product img{
