@@ -224,14 +224,19 @@ header.white .inner > label{
     width: 100%;
     flex-direction: row;
     flex: 1 1;
+    cursor: pointer;
 }
 .card img{
-    display: block;
-    width: 500px;
-    /* height: 280px; */
+    width: 400px;
+    height: 232px;
     object-fit: cover;
     border-radius: 10px;
     overflow: hidden;
+    flex-shrink: 0;
+}
+.card:hover img{
+    scale: 1.03;
+    transition: all 0.3s ease-in;
 }
 .card .note{
     display: flex;
@@ -294,7 +299,7 @@ footer{
 }
 footer .bottom{
     width: 100%;
-    padding: 60px 20px 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -404,6 +409,10 @@ footer .fotbox02 > p{
     }
     .cards .card{
         min-width: 270px;
+    }
+    .card img{
+        flex-shrink: 1;
+        width: 500px;
     }
     footer .fotlogo{
         display: flex;
@@ -541,7 +550,8 @@ footer .fotbox02 > p{
     }
     .card img{
         width: 100%;
-        max-height: 400px;
+        height: initial;
+        max-height: 250px;
     }
     .card .title{
         font-size: 16px;
@@ -582,5 +592,8 @@ footer .fotbox02 > p{
     }
     footer .bottom .right > p{
         font-size: 12px;
+    }
+    footer .fotbox01 a::before{
+        display: none;
     }
 }

@@ -295,7 +295,7 @@ footer{
 }
 footer .bottom{
     width: 100%;
-    padding: 60px 20px 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -548,5 +548,8 @@ footer .fotbox02 > p{
     }
     footer .bottom .right > p{
         font-size: 12px;
+    }
+    footer .fotbox01 a::before{
+        display: none;
     }
 }
