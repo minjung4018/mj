@@ -285,10 +285,13 @@ header.white .inner > label{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     font-family: 'Noto Sans Kr';
-    font-weight: 300;
+    font-weight: 400;
     font-size: 15px;
-    color: #444;
+    color: #666;
     width: 100%;
+}
+.card:hover .over{
+    color: #111;
 }
 footer{
     display: flex;
