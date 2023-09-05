@@ -15,3 +15,15 @@ btn.addEventListener("click", function(){
         alert("박민정을 검색해주세요")
     }
 })
+
+const btns = document.querySelectorAll(".btns button")
+const works = document.querySelectorAll(".work")
+Array.from(btns).forEach((btn, index) => {
+    btn.addEventListener("click", function () {
+        for(work of works){ work.classList.remove('on') }
+        for(btn of btns){ btn.classList.remove('on') }
+        btns[index].classList.add("on");
+		works[index].classList.add("on");
+    })
+})
+btns[0].click()

@@ -6,6 +6,8 @@
     <title>박민정의 포트폴리오</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,500,0,200">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
   <main>
@@ -21,7 +23,8 @@
           <span>연관검색어</span>
           <p>퍼블리싱</p>
           <p>끈기</p>
-          <p>잘먹음</p>
+          <p>창의성</p>
+          <p>책임감</p>
         </div>
         <div class="profile">
           <div class="left">
@@ -35,12 +38,10 @@
                   <td>생년월일</td>
                   <td>1999.11.28</td>
                 </tr>
-                <tr>
-                  <td>소개</td>
-                  <td></td>
-                </tr>
               </tbody>
             </table>
+            <span>우리에게 익숙한 F12,<br>예전의 저에겐 큰 문제 였습니다.</span>
+            <p></p>
           </div>
         </div>
       </div>
@@ -51,22 +52,73 @@
         <button>키이스케이프</button>
         <button>성심당</button>
       </div>
-      <div class="work">
+      <div class="work" style="background-image: url(img/index/backulsan.png);">
         <div class="content">
           <div class="text">
-            <h3>울산관광</h3>
             <div class="overview">
-              <p>overview</p>
-              <span></span>
+              <div>
+                <p>overview</p>
+                <span></span>
+              </div>
             </div>
           </div>
-          <div class="img">
+          <div class="img" data-aos="fade-left" data-aos-delay="200">
             <img src="img/index/ulsan_pc.png" alt="">
           </div>
         </div>
       </div>
+      <div class="work" style="background-image: url(img/index/backkey.png);">
+        <div class="content">
+          <div class="text">
+            <div class="overview">
+              <div>
+                <p>overview</p>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="img" data-aos="fade-left" data-aos-delay="200">
+            <img src="img/index/key_pc.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="work" style="background-image: url(img/index/backsungsimdang.png);">
+        <div class="content">
+          <div class="text">
+            <div class="overview">
+              <div>
+                <p>overview</p>
+                <span>assssssssssssssssssssssssssssssssssssssssssssssssssssssss</span>
+              </div>
+            </div>
+          </div>
+          <div class="img" data-aos="fade-left" data-aos-delay="200">
+            <img src="img/index/sungsimdang_pc.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- 라이브리 시티 설치 코드 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81ODk0OC8zNTQxMA==">
+	    <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+
+          if (typeof LivereTower === 'function') { return; }
+
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+	    </script>
+    </div>
+    <!-- 시티 설치 코드 끝 -->
   </main>
   <script src="js/index_search.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
