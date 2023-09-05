@@ -7,9 +7,11 @@ btn.addEventListener("click", function(){
         const after = document.querySelector(".after")
         const work = document.querySelector(".works")
         const search = document.querySelector(".search")
+        const contact = document.querySelector(".contact")
         after.classList.add("on")
         work.classList.add("on")
         search.classList.add("on")
+        contact.classList.add("on")
     }
     else{
         alert("박민정을 검색해주세요")
