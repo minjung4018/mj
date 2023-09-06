@@ -121,7 +121,7 @@ input::placeholder{
     justify-content: center;
 }
 .profile img{
-    width: 300px;
+    width: 250px;
     object-fit: cover;
 }
 .profile .right{
@@ -299,10 +299,10 @@ tbody td:first-child{
 .contact h1{
     -webkit-text-stroke: 1px #000;
     color: #fff;
-    font-size: 60px;
+    font-size: 80px;
 }
 .contact h2{
-    font-size: 32px;
+    font-size: 45px;
 }
 #lv-container{
     width: 100%;
