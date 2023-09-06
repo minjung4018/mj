@@ -153,10 +153,10 @@ tbody td:first-child{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 200px;
+    width: 180px;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 100px;
+    left: 50px;
 }
 .btns button{
     font-size: 18px;
@@ -167,17 +167,21 @@ tbody td:first-child{
     background: none;
     border-radius: 20px;
     color: #BCC5CE;
+    cursor: pointer;
 }
 .btns button.on{
     color: #729599;
     background: #eee;
+}
+.btns button:hover{
+    color: #729599;
 }
 .content{
     display: flex;
     flex-direction: row;
     gap: 50px;
     justify-content: end;
-    padding: 50px;
+    padding: 100px;
     width: 100%;
     max-width: 1800px;
 }
@@ -190,14 +194,48 @@ tbody td:first-child{
     display: block;
     width: 100%;
 }
-.overview p{
-    color: #E6DFD9;
-    font-size: 17px;
+.text{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
+.text > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text span{
+    color: #fff;
+    font-family: 'Noto Sans Kr';
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+}
+.text p{
+    color: #e4dad1;
+    font-size: 18px;
+}
+.text a{
+    color: #977f6a;
+    background: #dad6d3;
+    text-align: center;
+    width: 100px;
+    border-radius: 3px;
+    padding: 3px 0;
+}
+.text a:hover{
+    color: #5e4d3e;
+    background: #ece7e2;
+}
+/* .text a::before{
+    content: '';
+    background: ;
+} */
 .contact{
     width: 100%;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -224,7 +262,10 @@ tbody td:first-child{
 .contact h1{
     -webkit-text-stroke: 1px #000;
     color: #fff;
-    font-size: 50px;
+    font-size: 60px;
+}
+.contact h2{
+    font-size: 32px;
 }
 #lv-container{
     width: 100%;
