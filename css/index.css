@@ -278,7 +278,7 @@ tbody td:first-child{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:200px;
+    gap:100px;
     padding: 100px 0;
 }
 .contact.on{
@@ -312,4 +312,8 @@ tbody td:first-child{
     min-height: 400px;
     overflow-y: auto;
     padding: 0 10px;
+}
+.trc_related_container {
+    clear: both;
+    display: none; !important
 }
