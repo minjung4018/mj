@@ -44,12 +44,14 @@ main{
     gap: 5px;
     padding: 30px;
     margin: auto;
+    width: 100%;
+    max-width: 700px;
 }
 .search.on{
     margin: 0;
 }
 input[type="text"]{
-    width: 500px;
+    width: 100%;
     font-size: 20px;
     font-family: 'Noto Sans Kr';
     font-weight: 400;
