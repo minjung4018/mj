@@ -313,7 +313,8 @@ tbody td:first-child{
     overflow-y: auto;
     padding: 0 10px;
 }
-.trc_related_container {
+/* .trc_related_container {
     clear: both;
     display: none; !important
 }
+ */
