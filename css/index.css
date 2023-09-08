@@ -106,6 +106,9 @@ input::placeholder{
     box-shadow: 0px 0px 10px 5px #1d153f5b;
     position: relative;
 }
+.after a{
+    color: #555;
+}
 .after .close{
     color: #555;
     position: absolute;
