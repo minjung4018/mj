@@ -7,6 +7,7 @@ const search = document.querySelector(".search");
 const contact = document.querySelector(".contact");
 const keyword = document.querySelector(".keyword");
 const index = document.querySelector(".index");
+const main = document.querySelector("main");
 
 
 
@@ -18,6 +19,7 @@ function viewProfile() {
         contact.classList.add("on");
         keyword.classList.add("on");
         index.classList.add("on");
+        main.classList.add("on");
     }
     else {
         alert("박민정을 검색해주세요");
@@ -28,11 +30,11 @@ function viewProfile() {
 search.querySelector('input').addEventListener("keypress", e => {
     if (e.key === 'Enter' && e.target.value.length !== 0) {
         // 뭐라도 한 자 이상 입력하고 엔터를 눌렀을 때
-        viewProfile()
+        viewProfile();
 
         // 새로고침
         // location.reload();
-    }
+    };
 });
 // 검색버튼 이벤트
 searchBtn.addEventListener("click", viewProfile);
@@ -48,3 +50,17 @@ Array.from(btns).forEach((btn, index) => {
     });
 });
 btns[0].click();
+
+const close = document.querySelector(".close");
+close.addEventListener("click", function () {
+    location.reload();
+});
+const sms = document.querySelector(".sms");
+const reply = document.querySelector(".reply");
+sms.addEventListener("click", function () {
+    reply.classList.add("on");
+});
+const close2 = document.querySelector(".close2");
+close2.addEventListener("click", function () {
+    reply.classList.remove("on");
+});

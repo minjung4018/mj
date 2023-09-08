@@ -1,6 +1,12 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;600&family=Noto+Sans:wght@500&display=swap');
-
+/* 
+    0. 반응형 끝내기 Δ
+    1. 프로필 키워드 부사붙이기
+    2. 프로필 레이아웃에 close 버튼추가 0
+    3. index/on 두군데에 있는 bg를 main으로 옮기고(패럴랙스) 스크립트 on기능추가 0
+    4. 댓글창 모달로 분리하여 팝업 0
+*/
 *{
     padding: 0;
     margin: 0;
@@ -25,6 +31,12 @@ main{
     align-items: center;
     height: 100%;
     min-height: 100vh;
+    background: url(../img/index/blackback.png) 50% 50% / cover;
+    background-attachment: fixed;
+}
+main.on{
+    background: url(../img/index/blackbacksoft.png) 50% 50% / cover;
+    background-attachment: fixed;
 }
 .index{
     display: flex;
@@ -33,10 +45,9 @@ main{
     gap: 10px;    
     height: 100vh;
     width: 100%;
-    background: url(../img/index/blackback.png) 50% 50% / cover;
 }
 .index.on{
-    background: url(../img/index/blackbacksoft.png) 50% 50% / cover;
+    padding: 20px;
 }
 .search{
     display: flex;
@@ -78,7 +89,8 @@ input::placeholder{
     gap: 30px;
     overflow: hidden;
     background: #ffffffad;
-    min-width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     opacity: 0;
     justify-content: center;
     transform: translateY(20px);
@@ -92,6 +104,13 @@ input::placeholder{
     transform: translateY(0px);
     transition: transform 0.5s ease-out;
     box-shadow: 0px 0px 10px 5px #1d153f5b;
+    position: relative;
+}
+.after .close{
+    color: #555;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 .keyword{
     display: none;
@@ -183,15 +202,15 @@ tbody td:first-child{
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
 }
 .btns{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 180px;
     position: absolute;
-    top: 100px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
 }
 .btns button{
     font-size: 18px;
@@ -200,6 +219,7 @@ tbody td:first-child{
     border: none;
     padding: 5px 0;
     background: none;
+    width: 180px;
     border-radius: 20px;
     color: #BCC5CE;
     cursor: pointer;
@@ -219,6 +239,7 @@ tbody td:first-child{
     padding: 100px;
     width: 100%;
     max-width: 1800px;
+    align-items: center;
 }
 .content .img{
     width: 700px;
@@ -278,11 +299,12 @@ tbody td:first-child{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:100px;
-    padding: 100px 0;
+    gap:200px;
+    padding: 100px 20px;
 }
 .contact.on{
     display: flex;
+    position: relative;
 }
 .contact .phe{
     width: 100%;
@@ -299,21 +321,83 @@ tbody td:first-child{
     padding: 20px 0;
 }
 .contact h1{
-    -webkit-text-stroke: 1px #000;
-    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    color: #ffffff00;
     font-size: 80px;
 }
 .contact h2{
     font-size: 45px;
+    color: #fff;
+}
+.contact .sms{
+    font-size: 46px;
+    color: #dad6d3;
+    cursor: pointer;
+    z-index: 100;
+}
+.contact .reply{
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    padding: 20px;
+    background: #e2e2e2e0;
+    position: absolute;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin: 0 20px;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.contact .reply.on{
+    opacity: 100;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+    z-index: 101;
+}
+.contact .close2{
+    cursor: pointer;
 }
 #lv-container{
     width: 100%;
-    max-width: 1000px;
-    min-height: 400px;
-    overflow-y: auto;
-    padding: 0 10px;
 }
 .trc_related_container {
     clear: both;
-    display: none; !important
+    display: none;
+}
+@media screen and (max-width:900px){
+    .profile{
+        flex-direction: column;
+    }
+    .btns{
+        flex-direction: row;
+    }
+    .btns button{
+        width: 150px;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 50px;
+    }
+    .content .img{
+        width: 100%;
+        order: 1;
+    }
+    .content .text{
+        order: 2;
+        width: 100%;
+        gap: 20px;
+    }
+    .contact{
+        gap: 100px;
+    }
+    .contact .phe{
+        flex-direction: column;
+        gap: 20px;
+    }
 }
