@@ -221,7 +221,7 @@ tbody td:first-child{
     font-weight: 500;
     border: none;
     padding: 5px 0;
-    background: none;
+    background: #535c65;
     width: 180px;
     border-radius: 20px;
     color: #BCC5CE;
@@ -230,9 +230,6 @@ tbody td:first-child{
 .btns button.on{
     color: #729599;
     background: #eee;
-}
-.btns button:hover{
-    color: #729599;
 }
 .content{
     display: flex;
