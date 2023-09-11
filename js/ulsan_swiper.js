@@ -63,6 +63,7 @@ fetch(api)
     .then((response) => response.json())
     .then(function (result) {
         let icon = `<img src="img/ulsan/${result.weather[0].icon}.svg" alt="${result.weather[0].description}">`;
+        console.log(result)
         let temp = result.main.temp.toFixed(1);
         document.querySelector('.weather').innerHTML = icon
         document.querySelector('.temp').append(`${temp}`);

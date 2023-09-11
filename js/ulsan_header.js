@@ -26,10 +26,12 @@ function cancelSelection() {
         check4.checked = false;
     }
 }
+// 최초로딩
 window.addEventListener('load', () => {
     menu.addEventListener("click", cancelSelection);
     headerColor();
 });
+// 리사이징
 window.addEventListener('resize', () => {
     headerColor();
     if (wiw > 1010) { menu.checked = false; }
@@ -39,41 +41,3 @@ document.addEventListener('scroll', () => {
     if (scroll > 160) { header.classList.add('white'); }
     else if (scroll < 159) { header.classList.remove('white'); }
 });
-
-// const b01 = document.querySelectorAll('#btn01')
-// const b02 = document.querySelectorAll('#btn01')
-// const b03 = document.querySelectorAll('#btn01')
-// const b04 = document.querySelectorAll('#btn01')
-
-// if(b01.checked){
-//     b01.addEventListener("click", () => {
-//         b01.checked = false
-//     })
-// }
-// 푸터
-// const btns = document.querySelectorAll('.up button');
-// const sites = document.querySelectorAll('.sitetab');
-// Array.from(btns).forEach((btn, index) => {
-
-//     btn.addEventListener("click", function (e) {
-//         for (let site of sites) { site.classList.remove('on'); }
-//         for (let btn of btns) { btn.classList.remove('on'); }
-//         btns[index].classList.toggle("on");
-//         sites[index].classList.toggle("on");
-//         if (this.classList.contains('on')) {
-//             this.addEventListener("click", function (e) {
-//                 if(this == btn){
-//                     console.log(index);
-//                     btns[index].classList.toggle("on");
-//                     sites[index].classList.toggle("on");
-                    
-//                 }
-                
-//             })
-//             // e.stopImmediatePropagation;
-//         }
-        
-//     });
-
-// })
-
