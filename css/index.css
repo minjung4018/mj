@@ -282,10 +282,6 @@ tbody td:first-child{
     color: #5e4d3e;
     background: #ece7e2;
 }
-/* .text a::before{
-    content: '';
-    background: ;
-} */
 .contact{
     width: 100%;
     height: 100vh;
