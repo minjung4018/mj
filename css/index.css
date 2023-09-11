@@ -1,12 +1,5 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;600&family=Noto+Sans:wght@500&display=swap');
-/* 
-    0. 반응형 끝내기 Δ
-    1. 프로필 키워드 부사붙이기
-    2. 프로필 레이아웃에 close 버튼추가 0
-    3. index/on 두군데에 있는 bg를 main으로 옮기고(패럴랙스) 스크립트 on기능추가 0
-    4. 댓글창 모달로 분리하여 팝업 0
-*/
 *{
     padding: 0;
     margin: 0;
@@ -121,6 +114,7 @@ input::placeholder{
     gap: 20px;
     padding: 0 0 20px 0;
     align-items: center;
+    flex-wrap: wrap;
 }
 .keyword.on{
     display: flex;
@@ -236,7 +230,7 @@ tbody td:first-child{
     flex-direction: row;
     gap: 50px;
     justify-content: end;
-    padding: 100px 100px 200px 100px;
+    padding: 100px 100px 150px 100px;
     width: 100%;
     max-width: 1800px;
     align-items: center;
