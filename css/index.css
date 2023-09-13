@@ -107,9 +107,6 @@ input::placeholder{
     right: 0px;
     top: -42px;
 }
-.after .close{
-    /* color: #555; */
-}
 .keyword{
     display: none;
     flex-direction: row;
