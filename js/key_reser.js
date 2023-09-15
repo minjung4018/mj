@@ -13,15 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         weekday: 'narrow',
         initialView: 'dayGridMonth',
-        fixedWeekCount: false, // 6줄 고정 풀기
+        fixedWeekCount: false, 
         validRange(nowDate) { // 예약 가능한 날짜
             let startDate = endDate = nowDate;
             return {
-                start: startDate.setDate(startDate.getDate()), // 오늘로부터
-                end: endDate.setDate(endDate.getDate() + 13) // 2주후
+                start: startDate.setDate(startDate.getDate()),
+                end: endDate.setDate(endDate.getDate() + 13) 
             };
         },
-        dateClick(e) { // 클릭하면 출력
+        dateClick(e) {
             console.log(e.date.getDate() + '일을 선택하였습니다');
             let validDays = document.querySelectorAll('#calendar .fc-daygrid-day');
             for (const day of validDays) day.classList.remove("select");

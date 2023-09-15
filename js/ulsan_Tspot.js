@@ -1,6 +1,5 @@
 // https://apis.data.go.kr/B551011/KorService1/detailCommon1?serviceKey=XNo1uhF3LR%2FHjQD0GAYsNZeeqaa1ZtxEgVQ2DtaFwNqZZ%2FxnaOjgnsvuitSFBTZVwz1DXqeAe3PVOqQaqH4%2FNw%3D%3D&MobileOS=ETC&MobileApp=AppTest&_type=json&contentId=2784124&contentTypeId=12&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y&numOfRows=10&pageNo=
 
-// 관광지 12코드 기준 결과 168개
 const serviceKey = `XNo1uhF3LR/HjQD0GAYsNZeeqaa1ZtxEgVQ2DtaFwNqZZ/xnaOjgnsvuitSFBTZVwz1DXqeAe3PVOqQaqH4/Nw==`;
 const spotapi = `https://apis.data.go.kr/B551011/KorService1/areaBasedList1?serviceKey=${serviceKey}&numOfRows=120&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=o&contentTypeId=12&areaCode=7`;
 const getspot = async () => {
@@ -35,8 +34,6 @@ const getspot = async () => {
             divaddr.setAttribute('class', "addr");
         });
 
-        // 검색결과 갯수만큼 생성하면서 데이터 넣어라
-        // 버튼 클릭에 따라 코드 구분 소팅
     });
 };
 getspot();

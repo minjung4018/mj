@@ -29,11 +29,7 @@ function viewProfile() {
 // 검색 인풋 이벤트
 search.querySelector('input').addEventListener("keypress", e => {
     if (e.key === 'Enter' && e.target.value.length !== 0) {
-        // 뭐라도 한 자 이상 입력하고 엔터를 눌렀을 때
         viewProfile();
-
-        // 새로고침
-        // location.reload();
     };
 });
 // 검색버튼 이벤트
