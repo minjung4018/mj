@@ -123,3 +123,14 @@ article{
 .swiper-button-next:after, .swiper-button-prev:after{
     color: #dbdbdb;
 }
+@media screen and (max-width:900px){
+    .img {
+        width: 100%;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .left,.right{
+        width: 100%;
+    }
+}
